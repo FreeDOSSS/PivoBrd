@@ -1,0 +1,18 @@
+$colorAccent: #fbc10e;
+
+// Цвета для текста
+$colorFontWhite: #fff;
+$colorFontBlack: #000;
+
+// Цвета для блоков
+$colorWhite: rgb(4, 0, 255);
+$colorBlack: #000;
+
+// Точки перелома
+$breakPointTb: 748px;
+$breakPointDs: 1200px;
+
+// Ширина контайнера
+$widthMb: 300px;
+$widthTb: $breakPointTb - 20px;
+$widthDs: $breakPointDs - 20px;

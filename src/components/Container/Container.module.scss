@@ -1,0 +1,26 @@
+@import "./../../constants/variables.scss";
+
+div.wrp {
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+div.container {
+  width: $widthMb;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: $breakPointTb) {
+  div.container {
+    width: $widthTb;
+  }
+}
+
+@media (min-width: $breakPointDs) {
+  div.container {
+    min-width: $widthDs;
+    width: 70%;
+  }
+}

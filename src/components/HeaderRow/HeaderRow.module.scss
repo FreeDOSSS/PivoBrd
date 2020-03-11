@@ -1,0 +1,102 @@
+@import "./../../constants/variables.scss";
+
+.wrp {
+  background-color: $colorAccent;
+  background-image: url(./../../assets/images/pivoBuble.png);
+  background-position: center top;
+  background-size: cover;
+}
+
+.container {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(5, 1fr);
+  // grid-template-rows: 1;
+  color: $colorFontBlack;
+  font-size: 18px;
+}
+
+.logo {
+  height: 50px;
+  margin: auto;
+}
+
+.arrow {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+
+    left: 100%;
+    $size: 15px;
+    transform: translateY(-50%) rotateZ(45deg) skew(20deg, 20deg);
+    // transform-origin: left center;
+    width: $size;
+    height: $size;
+    $colorBorder: #00000060;
+    border-top: 2px solid $colorBorder;
+    border-right: 2px solid $colorBorder;
+  }
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+}
+.icon {
+  $size: 50px;
+  width: $size;
+  height: $size;
+  fill: $colorWhite;
+
+  &_wrp {
+    margin-right: 5px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+a {
+  color: $colorFontBlack;
+  font-weight: 700;
+}
+
+.delivery {
+  padding-left: 5px;
+
+  p:first-of-type {
+    font-weight: 700;
+  }
+}
+.city {
+  margin: 0;
+  font-weight: 700;
+
+  &_dostavka {
+    margin: 0;
+    font-weight: 400;
+  }
+}
+
+.circle {
+  margin-left: 10px;
+  $size: 30px;
+  width: $size;
+  height: $size;
+  border-radius: $size;
+  line-height: $size;
+  background: $colorWhite;
+}
+
+.cart {
+  &_title {
+    color: $colorFontBlack;
+    margin: 0;
+    font-weight: 700;
+  }
+}
