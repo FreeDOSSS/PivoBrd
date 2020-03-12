@@ -1,13 +1,33 @@
 import clsx from "clsx";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Container from "../Container/Container";
 import constants from "./../../constants/variables";
 import * as style from "./HeaderRow.module.scss";
+import { connect } from "react-redux";
 
-function HeaderRow({ city = "Бердянск", citys = "Бердянске", cart = 0 }) {
+import db from "./../../helpers/db";
+
+function HeaderRow({ city = "Бердянск", citys = "Бердянске", cart }) {
+  const [amount, setAmount] = useState(0);
+
   const hendlerButton = () => {
-    alert("Корзина еще не работает!!!");
+    alert("Корзина еще не работает, но она умеет считать");
   };
+
+  const showSliceBeer = () => {};
+
+  useEffect(() => {
+    if (cart.lenght === 0) return;
+
+    const total = cart.reduce(
+      (acc, el) =>
+        (acc += db.find(elem => elem.id === el.id).price * el.currentSize),
+      0
+    );
+    console.log("total", total);
+
+    setAmount(total);
+  }, [cart]);
 
   return (
     <Container wrp={style.wrp} container={style.container}>
@@ -53,14 +73,20 @@ function HeaderRow({ city = "Бердянск", citys = "Бердянске", ca
           onClick={hendlerButton}
         >
           <h4 className={style.cart_title}>Корзина</h4>
-          <span className={style.circle}>{cart}</span>
           <svg className={style.icon}>
             <use href="#cart"></use>
           </svg>
+          <span className={style.circle}>{amount} грн.</span>
         </button>
       </div>
     </Container>
   );
 }
 
-export default HeaderRow;
+const mapStaToProps = state => {
+  return {
+    cart: state.goods
+  };
+};
+
+export default connect(mapStaToProps)(HeaderRow);

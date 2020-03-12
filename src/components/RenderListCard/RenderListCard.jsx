@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
-import { beer } from "./../../helpers/beer";
+import db from "./../../helpers/db";
 import Container from "./../Container";
 import * as style from "./RenderListCard.module.scss";
 
@@ -10,13 +10,12 @@ function RenderListCard({ name }) {
   useEffect(() => {
     switch (name) {
       case "beer":
-        setList(beer);
+        setList(db.filter(el => el.category === name));
         break;
       default:
         break;
     }
-    console.log("list", list);
-  }, []);
+  }, [name]);
 
   return (
     <Container container={style.box}>

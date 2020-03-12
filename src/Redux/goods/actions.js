@@ -1,33 +1,41 @@
-import * as types from "./appTypes";
-// события
+import * as types from "./types";
 
-export const saveBudget = budget => {
+export const addGoodsItem = ({ id, currentSize, slice = [] }) => {
   return {
-    type: types.SAVE_BUDGET,
+    type: types.ADD_GOODS_BEER,
     payload: {
-      budget: Number(budget)
-    }
-  };
-};
-
-export const addExpense = ({ name, amount }) => {
-  return {
-    type: types.ADD_EXPENSE,
-    payload: {
-      expenses: {
-        id: shortid.generate(),
-        name,
-        amount: Number(amount)
+      beer: {
+        id,
+        currentSize,
+        slice
       }
     }
   };
 };
 
-export const removeExpense = id => {
-  return {
-    type: types.REMOVE_EXPENSE,
-    payload: {
-      id
-    }
-  };
-};
+// export const saveBudget = budget => {
+//   return {
+//     type: types.SAVE_BUDGET,
+//     payload: {
+//       budget: Number(budget)
+//     }
+//   };
+// };
+
+// export const addExpense = ({ name, amount }) => {
+//   return {
+//     type: types.ADD_EXPENSE,
+//     payload: {
+//       }
+//     }
+//   };
+// };
+
+// export const removeExpense = id => {
+//   return {
+//     type: types.REMOVE_EXPENSE,
+//     payload: {
+//       id
+//     }
+//   };
+// };

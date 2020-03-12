@@ -1,5 +1,4 @@
 // имена событий которые будут выстреливаться
 
-export const SAVE_BUDGET = "SAVE_BUDGET";
-export const REMOVE_EXPENSE = "REMOVE_EXPENSE";
-export const ADD_EXPENSE = "ADD_EXPENSE";
+export const ADD_GOODS_BEER = "ADD_GOODS_BEER";
+export const REMOVE_GOODS_ITEM = "REMOVE_GOODS_ITEM";

@@ -1,21 +1,25 @@
+import "reset-css";
+import "antd/dist/antd.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import "reset-css";
 import HeaderRow from "./components/HeaderRow/HeaderRow";
 import Menu from "./components/Menu/Menu";
 import SvgSprite from "./components/SvgSprite/SvgSprite";
 import "./helpers/common.scss";
 import store from "./Redux/store";
 import router from "./router";
+import { Affix } from "antd";
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <SvgSprite />
-      <HeaderRow />
-      <Menu />
+      <Affix offsetTop={0}>
+        <SvgSprite />
+        <HeaderRow />
+        <Menu />
+      </Affix>
       <Switch>
         <Route
           path={router.home.path}
