@@ -3,7 +3,8 @@ import Home from "./../pages/Home";
 const router = {
   home: {
     path: "/",
-    component: Home
+    component: Home,
+    title: "Пиво"
   }
 };
 

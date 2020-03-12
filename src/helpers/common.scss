@@ -1,7 +1,3 @@
-@import "uikit/src/scss/variables-theme.scss";
-@import "uikit/src/scss/mixins-theme.scss";
-@import "uikit/src/scss/uikit-theme.scss";
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -9,7 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
+  background-image: url(https://fonweb.ucoz.ru/_ph/64/282958873.jpg);
+
+  // background-image: url(https://i.pinimg.com/originals/c9/b2/a5/c9b2a59907a5037469847f73606dd0c8.jpg);
+  // background-image: url(https://grynykha.com/public/img/portfolio/39isiBV0uIppn9t.jpg);
+  // background-size: cover;
+  // background-attachment: fixed;
 }
 
 code {
@@ -22,7 +23,7 @@ code {
   padding: 0;
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
-
+  transition: all 0.2s;
   &:active {
     outline: none !important;
   }
@@ -33,9 +34,13 @@ code {
   display: none;
 }
 
-a:hover {
+a {
   text-decoration: none;
-  color: inherit;
+  display: block;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 button {
@@ -59,4 +64,10 @@ button {
 
 img {
   display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
