@@ -80,15 +80,23 @@
 }
 
 .buyBtn {
-  transition: all 0.2s;
+  // transition: all 0.2s;
   background-color: $colorAccent;
-  padding: 0 20px;
-  color: $colorFontBlack;
+  // padding: 0 20px;
   letter-spacing: 1px;
   border-radius: 6px;
+  height: auto;
   color: $colorFontWhite;
+  width: 110px;
 
   &:hover {
     background-color: darken($colorAccent, 5%);
+  }
+
+  &:focus,
+  &:active {
+    border: none;
+    color: $colorFontWhite !important;
+    background-color: $colorAccent !important;
   }
 }

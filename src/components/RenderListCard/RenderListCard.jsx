@@ -6,15 +6,8 @@ import * as style from "./RenderListCard.module.scss";
 
 function RenderListCard({ name }) {
   const [list, setList] = useState(null);
-
   useEffect(() => {
-    switch (name) {
-      case "beer":
-        setList(db.filter(el => el.category === name));
-        break;
-      default:
-        break;
-    }
+    setList(db.filter(el => el.category === name));
   }, [name]);
 
   return (

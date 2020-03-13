@@ -1,0 +1,82 @@
+@import "./../../constants/variables.scss";
+
+.pivo {
+  display: flex;
+}
+
+.img {
+  height: 180px;
+}
+
+.discription {
+  padding: 20px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: $colorFontBlack;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.genSize {
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  .sizeTitle {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.selectSize {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparentize($colorBlack, 0.6);
+  border-radius: 8px;
+
+  .count {
+    width: 35px;
+    font-size: 18px;
+    text-align: center;
+    color: $colorFontBlack;
+  }
+
+  .btnSize {
+    padding: 2px 10px;
+    font-size: 24px;
+    color: $colorFontBlack;
+
+    &:hover {
+      color: $colorAccent;
+    }
+  }
+}
+
+.selectTunk {
+  display: flex;
+  flex-wrap: wrap;
+  &_item {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    &_title {
+      margin-bottom: 10px;
+      // text-align: center;
+    }
+  }
+}
+
+.select {
+  display: flex;
+}
+
+.icon {
+  $size: 35px;
+  width: $size;
+  height: $size + 10px;
+  margin-left: $size / 3 * -1;
+}

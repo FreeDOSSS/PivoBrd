@@ -1,11 +1,10 @@
 import clsx from "clsx";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import Container from "../Container/Container";
 import constants from "./../../constants/variables";
-import * as style from "./HeaderRow.module.scss";
-import { connect } from "react-redux";
-
 import db from "./../../helpers/db";
+import * as style from "./HeaderRow.module.scss";
 
 function HeaderRow({ city = "Бердянск", citys = "Бердянске", cart }) {
   const [amount, setAmount] = useState(0);
@@ -14,7 +13,7 @@ function HeaderRow({ city = "Бердянск", citys = "Бердянске", ca
     alert("Корзина еще не работает, но она умеет считать");
   };
 
-  const showSliceBeer = () => {};
+  // const showSliceBeer = () => {};
 
   useEffect(() => {
     if (cart.lenght === 0) return;
@@ -24,7 +23,6 @@ function HeaderRow({ city = "Бердянск", citys = "Бердянске", ca
         (acc += db.find(elem => elem.id === el.id).price * el.currentSize),
       0
     );
-    console.log("total", total);
 
     setAmount(total);
   }, [cart]);

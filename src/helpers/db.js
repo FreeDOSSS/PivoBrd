@@ -4,168 +4,171 @@ import vist_night from "./../assets/images/vist_night.jpg";
 import vist_g from "./../assets/images/vist_g.jpg";
 
 const db = [
+  // ВИСТ
   {
     id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    brend: "Жигулевское",
+    category: "vist",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 25,
     deg: "4.8",
-    color: "Светлое",
-    type: "Нефильтрование",
-    img: vist_gold
-  },
-  {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
-    deg: "4.8",
-    color: "Светлое",
-    type: "Нефильтрование",
-    img: vist_mos
-  },
-  {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
-    deg: "4.8",
-    color: "Светлое",
-    type: "Нефильтрование",
+    color: "светлое",
+    type: "Фильтрованное",
     img: vist_g
   },
   {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    id: "002",
+    brend: "Московское",
+    category: "vist",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 26,
     deg: "4.8",
     color: "Светлое",
-    type: "Нефильтрование",
+    type: "Фильтрованное",
+    img: vist_mos
+  },
+  {
+    id: "003",
+    brend: "Gold",
+    category: "vist",
+    discription:
+      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    price: 26,
+    deg: "4.8",
+    color: "Светлое",
+    type: "Фильтрованное",
+    img: vist_gold
+  },
+  {
+    id: "004",
+    brend: "Запорожская ночь",
+    category: "vist",
+    discription:
+      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    price: 26,
+    deg: "4.8",
+    color: "Полутёмное",
+    type: "Фильтрованное",
     img: vist_night
   },
+  // СИЧ
   {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    id: "005",
+    brend: "Жигулевское",
+    category: "sich",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 22,
     deg: "4.8",
     color: "Светлое",
-    type: "Нефильтрование",
+    type: "Фильтрованное",
     img:
       "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
   },
   {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    id: "006",
+    brend: "Московское",
+    category: "sich",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 23,
     deg: "4.8",
     color: "Светлое",
-    type: "Нефильтрование",
+    type: "Фильтрованное",
     img:
       "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
   },
   {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    id: "007",
+    brend: "Московское",
+    category: "sich",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 24,
     deg: "4.8",
     color: "Светлое",
-    type: "Нефильтрование",
+    type: "Фильтрованное",
     img:
       "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
   },
   {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    id: "008",
+    brend: "Чумацкое",
+    category: "sich",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 24,
     deg: "4.8",
-    color: "Светлое",
-    type: "Нефильтрование",
+    color: "Темное",
+    type: "Фильтрованное",
     img:
       "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
   },
   {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    id: "009",
+    brend: "Медовое",
+    category: "sich",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 24,
     deg: "4.8",
     color: "Светлое",
-    type: "Нефильтрование",
+    type: "Фильтрованное",
     img:
       "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
   },
   {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    id: "010",
+    brend: "95",
+    category: "sich",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 24,
     deg: "4.8",
     color: "Светлое",
-    type: "Нефильтрование",
+    type: "Фильтрованное",
     img:
       "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
   },
   {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    id: "011",
+    brend: "Kegler Brielle",
+    category: "sich",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 25,
     deg: "4.8",
     color: "Светлое",
-    type: "Нефильтрование",
+    type: "Фильтрованное",
+    img:
+      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+  },
+  // Диморис
+  {
+    id: "012",
+    brend: "Южная Бавария",
+    category: "dimoris",
+    discription:
+      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    price: 24,
+    deg: "4.8",
+    color: "Светлое",
+    type: "Фильтрованное",
     img:
       "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
   },
   {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
+    id: "013",
+    brend: "Южная Бавария",
+    category: "dimoris",
     discription:
       "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
+    price: 24,
     deg: "4.8",
-    color: "Светлое",
-    type: "Нефильтрование",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
-  },
-  {
-    id: "001",
-    brend: "Hugarden",
-    category: "beer",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
-    price: 20,
-    deg: "4.8",
-    color: "Светлое",
-    type: "Нефильтрование",
+    color: "Темное",
+    type: "Фильтрованное",
     img:
       "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
   }
