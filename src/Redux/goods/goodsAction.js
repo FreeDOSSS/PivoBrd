@@ -1,4 +1,4 @@
-import * as types from "./types";
+import * as types from "./typesGoods";
 
 export const addGoodsItem = ({ id, currentSize, slice = [] }) => {
   return {

@@ -1,16 +1,14 @@
-import { Tooltip, Button, notification } from "antd";
-import React, { useState } from "react";
-import { connect } from "react-redux";
-import { addGoodsItem } from "./../../Redux/goods/actions";
-import * as style from "./Card.module.scss";
 import { PlusOutlined } from "@ant-design/icons";
+import { Button, notification, Tooltip } from "antd";
+import React, { useState } from "react";
 import SplitTunk from "../SplitTunk/SplitTunk";
+import * as style from "./Card.module.scss";
 
 function Card({ addGoods, item }) {
   const [tunk, setTunk] = useState(0.5);
   const [loading, setLoading] = useState(false);
 
-  // Модалка
+  // МодалкаtypesGoods
   const [visible, setViseble] = useState(false);
   const showModal = () => setViseble(true);
   const onClose = e => setViseble(false);
@@ -86,12 +84,5 @@ function Card({ addGoods, item }) {
     </>
   );
 }
-const mapDispatchToProps = dispatch => {
-  return {
-    addGoods: ({ id, currentSize, slice }) =>
-      dispatch(addGoodsItem({ id, currentSize, slice }))
-  };
-};
 
-export default connect(null, mapDispatchToProps)(Card);
-// export default Card;
+export default Card;
