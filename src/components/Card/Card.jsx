@@ -7,7 +7,6 @@ import AcceptGoods from "../AcceptGoods/AcceptGoods";
 
 function Card({ addGoods, item }) {
   const [tunk, setTunk] = useState(0.5);
-  const [loading, setLoading] = useState(false);
 
   // Модалка SplitTunk
   const [visible, setViseble] = useState(false);
@@ -26,12 +25,8 @@ function Card({ addGoods, item }) {
 
   // Кнопка купить под картой
   const btnAdd = () => {
-    setLoading(true);
     addGoods({ id: item.id, currentSize: Number(tunk) });
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
+    showAccept();
   };
 
   return (
@@ -80,7 +75,6 @@ function Card({ addGoods, item }) {
           <Button
             className={style.buyBtn}
             icon={<PlusOutlined />}
-            loading={loading}
             onClick={btnAdd}
           >
             Купить
