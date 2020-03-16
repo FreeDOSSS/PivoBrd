@@ -80,3 +80,58 @@
   height: $size + 10px;
   margin-left: $size / 3 * -1;
 }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  color: $colorFontBlack;
+  font-size: 20px;
+}
+
+.animShowRow {
+  animation: showRow 300ms forwards;
+}
+
+.total {
+  justify-content: flex-end;
+
+  align-items: center;
+}
+
+.buyBtn {
+  padding: 5px 10px;
+  background-color: $colorAccent;
+  color: $colorFontWhite;
+  margin-left: 10px;
+  border-radius: 6px;
+  transition: all 0.5s;
+
+  &:disabled {
+    background-color: rgb(131, 131, 131);
+  }
+}
+
+.item_enter {
+  opacity: 0;
+}
+.item_enter_active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item_exit {
+  opacity: 1;
+}
+.item_exit_active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+@keyframes showRow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

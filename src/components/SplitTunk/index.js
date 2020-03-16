@@ -1,3 +1,1 @@
-import SplitTunk from "./SplitTunk";
-
-export default SplitTunk;
+export { default } from "./SplitTunk";

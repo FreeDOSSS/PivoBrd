@@ -1,12 +1,12 @@
-import { Divider, Modal, Alert } from "antd";
+import { Alert, Divider, Modal } from "antd";
+import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-import * as style from "./SplitTunk.module.scss";
-
 import price from "./../../helpers/price";
+import * as style from "./SplitTunk.module.scss";
 
 // const { Title } = Typography;
 
-function SplitTunk({ show, item, onClose, onOk, genSize, ink, dec }) {
+function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
   const [bottle_05, setBottle_05] = useState(0);
   const [bottle_1, setBottle_1] = useState(0);
   const [bottle_15, setBottle_15] = useState(0);
@@ -14,8 +14,21 @@ function SplitTunk({ show, item, onClose, onOk, genSize, ink, dec }) {
   const [bottle_3, setBottle_3] = useState(0);
   const [totalBottle, setTotalBottle] = useState(null);
 
+  // Общий обем всех бутылок
   const reduceBootle = () =>
     bottle_05 * 0.5 + bottle_1 + bottle_15 * 1.5 + bottle_2 * 2 + bottle_3 * 3;
+
+  const checkError = () => (genSize === reduceBootle() ? "" : "disabled");
+
+  // Стоимость напитка + тара
+  const totlaPrice = () =>
+    (Array.isArray(totalBottle)
+      ? totalBottle.reduce(
+          (acc, el) => acc + price.bottle[el.type] * el.count,
+          0
+        )
+      : 0) +
+    genSize * item.price;
 
   useEffect(() => {
     if (bottle_3 < 0) setBottle_3(0);
@@ -57,10 +70,8 @@ function SplitTunk({ show, item, onClose, onOk, genSize, ink, dec }) {
   const bodyModal = {
     padding: "40px"
   };
-  // TODO При изменение общего обёма вывести ошибку в случае перебора по бутылкам
   // Счетчик по тарам
   const add = ({ target }) => {
-    console.log("reduceBootle", reduceBootle);
     const { size } = target.dataset;
     if (reduceBootle() + Number(size) > genSize) return;
     switch (size) {
@@ -107,6 +118,16 @@ function SplitTunk({ show, item, onClose, onOk, genSize, ink, dec }) {
     }
   };
 
+  // Кнопка Купить
+  const hendlerBuyBtn = () => {
+    addGoods({
+      id: item.id,
+      currentSize: genSize,
+      slice: totalBottle
+    });
+    onClose();
+  };
+
   return (
     <Modal
       visible={show}
@@ -140,51 +161,45 @@ function SplitTunk({ show, item, onClose, onOk, genSize, ink, dec }) {
 
           {genSize - reduceBootle() > 0 && (
             <Alert
-              message={`Не распределено ${genSize - reduceBootle()}л`}
+              className={style.animShowRow}
+              message={`Не распределено ${genSize - reduceBootle()} л.`}
               type="warning"
             />
           )}
+
           {genSize - reduceBootle() < 0 && (
             <Alert
+              className={style.animShowRow}
               message={`Преувеличен выбор разлива тары на ${reduceBootle() -
-                genSize}`}
+                genSize} л.`}
               type="error"
             />
           )}
+
           <Divider orientation="left">Розлить по тарам</Divider>
 
           <div className={style.selectTunk}>
             <div className={style.selectTunk_item}>
-              <p className={style.selectTunk_item_title}>Бутылка, 3л</p>
+              <p className={style.selectTunk_item_title}>Бутылка, 0.5 л.</p>
 
               <div className={style.select}>
                 <svg className={style.icon}>
                   <use href="#bottle"></use>
                 </svg>
                 <div className={style.selectSize}>
-                  <button onClick={del} className={style.btnSize} data-size="3">
+                  <button
+                    onClick={del}
+                    className={style.btnSize}
+                    data-size="0.5"
+                  >
                     -
                   </button>
-                  <span className={style.count}>{bottle_3}</span>
-                  <button onClick={add} className={style.btnSize} data-size="3">
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className={style.selectTunk_item}>
-              <p className={style.selectTunk_item_title}>Бутылка, 2л</p>
-
-              <div className={style.select}>
-                <svg className={style.icon}>
-                  <use href="#bottle"></use>
-                </svg>
-                <div className={style.selectSize}>
-                  <button onClick={del} className={style.btnSize} data-size="2">
-                    -
-                  </button>
-                  <span className={style.count}>{bottle_2}</span>
-                  <button onClick={add} className={style.btnSize} data-size="2">
+                  <span className={style.count}>{bottle_05}</span>
+                  <button
+                    onClick={add}
+                    className={style.btnSize}
+                    data-size="0.5"
+                  >
                     +
                   </button>
                 </div>
@@ -192,7 +207,26 @@ function SplitTunk({ show, item, onClose, onOk, genSize, ink, dec }) {
             </div>
 
             <div className={style.selectTunk_item}>
-              <p className={style.selectTunk_item_title}>Бутылка, 1.5л</p>
+              <p className={style.selectTunk_item_title}>Бутылка, 1 л.</p>
+
+              <div className={style.select}>
+                <svg className={style.icon}>
+                  <use href="#bottle"></use>
+                </svg>
+                <div className={style.selectSize}>
+                  <button onClick={del} className={style.btnSize} data-size="1">
+                    -
+                  </button>
+                  <span className={style.count}>{bottle_1}</span>
+                  <button onClick={add} className={style.btnSize} data-size="1">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className={style.selectTunk_item}>
+              <p className={style.selectTunk_item_title}>Бутылка, 1.5 л.</p>
 
               <div className={style.select}>
                 <svg className={style.icon}>
@@ -219,18 +253,18 @@ function SplitTunk({ show, item, onClose, onOk, genSize, ink, dec }) {
             </div>
 
             <div className={style.selectTunk_item}>
-              <p className={style.selectTunk_item_title}>Бутылка, 1л</p>
+              <p className={style.selectTunk_item_title}>Бутылка, 2 л.</p>
 
               <div className={style.select}>
                 <svg className={style.icon}>
                   <use href="#bottle"></use>
                 </svg>
                 <div className={style.selectSize}>
-                  <button onClick={del} className={style.btnSize} data-size="1">
+                  <button onClick={del} className={style.btnSize} data-size="2">
                     -
                   </button>
-                  <span className={style.count}>{bottle_1}</span>
-                  <button onClick={add} className={style.btnSize} data-size="1">
+                  <span className={style.count}>{bottle_2}</span>
+                  <button onClick={add} className={style.btnSize} data-size="2">
                     +
                   </button>
                 </div>
@@ -238,26 +272,18 @@ function SplitTunk({ show, item, onClose, onOk, genSize, ink, dec }) {
             </div>
 
             <div className={style.selectTunk_item}>
-              <p className={style.selectTunk_item_title}>Бутылка, 0.5л</p>
+              <p className={style.selectTunk_item_title}>Бутылка, 3 л.</p>
 
               <div className={style.select}>
                 <svg className={style.icon}>
                   <use href="#bottle"></use>
                 </svg>
                 <div className={style.selectSize}>
-                  <button
-                    onClick={del}
-                    className={style.btnSize}
-                    data-size="0.5"
-                  >
+                  <button onClick={del} className={style.btnSize} data-size="3">
                     -
                   </button>
-                  <span className={style.count}>{bottle_05}</span>
-                  <button
-                    onClick={add}
-                    className={style.btnSize}
-                    data-size="0.5"
-                  >
+                  <span className={style.count}>{bottle_3}</span>
+                  <button onClick={add} className={style.btnSize} data-size="3">
                     +
                   </button>
                 </div>
@@ -270,19 +296,33 @@ function SplitTunk({ show, item, onClose, onOk, genSize, ink, dec }) {
               <Divider orientation="left">Выбрано</Divider>
               {totalBottle.map(el =>
                 el.count > 0 ? (
-                  <div className={style.row} key={el.type}>
-                    <p className={style.name}>Бутылка {el.type}л</p>
+                  <div
+                    className={clsx(style.row, style.animShowRow)}
+                    key={el.type}
+                  >
+                    <p className={style.name}>Бутылка {el.type} л.</p>
                     <p className={style.price}>
-                      {price.bottle[el.type] * el.count}
+                      {price.bottle[el.type] * el.count} грн.
                     </p>
                   </div>
                 ) : null
               )}
             </>
           )}
+          <Divider orientation="left">Итого</Divider>
+          <div className={clsx(style.total, style.row)}>
+            {totlaPrice()} грн.
+            <button
+              type="button"
+              className={style.buyBtn}
+              disabled={checkError()}
+              onClick={hendlerBuyBtn}
+            >
+              Купить
+            </button>
+          </div>
         </div>
       </div>
-      <footer className={style.footer}></footer>
     </Modal>
   );
 }

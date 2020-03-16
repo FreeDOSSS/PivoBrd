@@ -1,6 +1,6 @@
 import Card from "./Card";
-import { connect } from "react-redux";
 import { addGoodsItem } from "./../../Redux/goods/goodsAction";
+import { connect } from "react-redux";
 
 const mapDispatchToProps = dispatch => {
   return {

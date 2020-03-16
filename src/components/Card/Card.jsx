@@ -1,18 +1,23 @@
 import { PlusOutlined } from "@ant-design/icons";
-import { Button, notification, Tooltip } from "antd";
+import { Button, Tooltip } from "antd";
 import React, { useState } from "react";
-import SplitTunk from "../SplitTunk/SplitTunk";
+import SplitTunk from "./../SplitTunk";
 import * as style from "./Card.module.scss";
+import AcceptGoods from "../AcceptGoods/AcceptGoods";
 
 function Card({ addGoods, item }) {
   const [tunk, setTunk] = useState(0.5);
   const [loading, setLoading] = useState(false);
 
-  // МодалкаtypesGoods
+  // Модалка SplitTunk
   const [visible, setViseble] = useState(false);
   const showModal = () => setViseble(true);
   const onClose = e => setViseble(false);
-  const onOk = e => console.log("ok", e);
+
+  // Модалка Accept Goods
+  const [acceptGoods, setAcceptGoods] = useState(false);
+  const showAccept = () => setAcceptGoods(true);
+  const closeAccept = () => setAcceptGoods(false);
 
   // Счетчик
   const STEP = 0.5;
@@ -23,7 +28,7 @@ function Card({ addGoods, item }) {
   const btnAdd = () => {
     setLoading(true);
     addGoods({ id: item.id, currentSize: Number(tunk) });
-    notification.success({ message: "Успешно добавленно!", duration: 1 });
+
     setTimeout(() => {
       setLoading(false);
     }, 500);
@@ -33,13 +38,14 @@ function Card({ addGoods, item }) {
     <>
       <SplitTunk
         show={visible}
-        onOk={onOk}
         onClose={onClose}
+        addGoods={btnAdd}
         item={item}
         genSize={tunk}
         ink={ink}
         dec={dec}
       />
+      <AcceptGoods show={acceptGoods} onClose={closeAccept} id={item.id} />
       <div className={style.card}>
         <div className={style.img_wrp}>
           <img className={style.img} alt={item.brend} src={item.img} />

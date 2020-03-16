@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "../Card/Card";
+import Card from "./../Card/index";
 import db from "./../../helpers/db";
 import Container from "./../Container";
 import * as style from "./RenderListCard.module.scss";

@@ -1,35 +1,19 @@
-import { Affix } from "antd";
 import "antd/dist/antd.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "reset-css";
-import HeaderRow from "./components/HeaderRow/HeaderRow";
-import Menu from "./components/Menu/Menu";
-import SvgSprite from "./components/SvgSprite/SvgSprite";
+import App from "./App";
 import "./helpers/common.scss";
 import store from "./Redux/store";
-import router from "./router";
 
-const App = () => (
+const Root = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <Affix offsetTop={0}>
-        <SvgSprite />
-        <HeaderRow />
-        <Menu />
-      </Affix>
-      <Switch>
-        <Route
-          path={router.home.path}
-          component={router.home.component}
-          exact
-        />
-        <Redirect to={router.home.path} />
-      </Switch>
+      <App />
     </BrowserRouter>
   </Provider>
 );
 
-ReactDOM.render(<App />, document.getElementById("pivo"));
+ReactDOM.render(<Root />, document.getElementById("pivo"));

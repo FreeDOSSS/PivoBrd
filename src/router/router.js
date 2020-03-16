@@ -5,6 +5,11 @@ const router = {
     path: "/",
     component: Home,
     title: "Пиво"
+  },
+  goods: {
+    path: "/",
+    component: null
+    // title: ""
   }
 };
 
