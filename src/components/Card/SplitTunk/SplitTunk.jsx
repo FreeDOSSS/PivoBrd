@@ -1,7 +1,7 @@
 import { Alert, Divider, Modal } from "antd";
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-import price from "./../../helpers/price";
+import price from "./../../../db/price";
 import * as style from "./SplitTunk.module.scss";
 
 // const { Title } = Typography;
@@ -131,7 +131,6 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
   return (
     <Modal
       visible={show}
-      // onOk={onOk}
       onCancel={onClose}
       style={documentStyle}
       bodyStyle={bodyModal}
@@ -139,7 +138,7 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
       footer={null}
     >
       <div className={style.pivo}>
-        <div className="img_wrp">
+        <div className={style.img_wrp}>
           <img src={item.img} alt={item.brend} className={style.img} />
         </div>
 
@@ -314,7 +313,7 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
             {totlaPrice()} грн.
             <button
               type="button"
-              className={style.buyBtn}
+              className={clsx("super-btn", style.buyBtn)}
               disabled={checkError()}
               onClick={hendlerBuyBtn}
             >

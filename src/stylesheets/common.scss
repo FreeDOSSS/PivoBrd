@@ -63,6 +63,7 @@ button {
 }
 
 img {
+  object-fit: contain;
   display: block;
   width: 100%;
 }
@@ -71,4 +72,38 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.super-btn {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 12px 40px;
+  // margin: 10px 20px;
+  border-radius: 6px;
+  background-image: linear-gradient(
+    45deg,
+    #f57820 0%,
+    #deb933 50%,
+    #f77c03 100%
+  );
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  font-family: "Montserrat", sans-serif;
+  // font-size: 24px;
+  font-weight: 300;
+  color: white;
+  box-shadow: 0 16px 32px 0 rgba(0, 40, 120, 0.35);
+  transition: 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+  }
+}
+
+.goods {
+  .ant-drawer-content-wrapper {
+    max-width: 500px;
+  }
 }

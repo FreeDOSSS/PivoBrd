@@ -1,9 +1,9 @@
-import { PlusOutlined } from "@ant-design/icons";
-import { Button, Tooltip } from "antd";
+import { Tooltip } from "antd";
+import clsx from "clsx";
 import React, { useState } from "react";
-import SplitTunk from "./../SplitTunk";
+import AcceptGoods from "./AcceptGoods";
+import SplitTunk from "./SplitTunk";
 import * as style from "./Card.module.scss";
-import AcceptGoods from "../AcceptGoods/AcceptGoods";
 
 function Card({ addGoods, item }) {
   const [tunk, setTunk] = useState(0.5);
@@ -53,7 +53,7 @@ function Card({ addGoods, item }) {
           <Tooltip title="Розлить по таре" arrowPointAtCenter>
             <button
               type="button"
-              className={style.bottleBtn}
+              className={clsx(style.bottleBtn, "super-btn")}
               onClick={showModal}
             >
               <svg className={style.icon}>
@@ -72,13 +72,9 @@ function Card({ addGoods, item }) {
             </button>
           </div>
 
-          <Button
-            className={style.buyBtn}
-            icon={<PlusOutlined />}
-            onClick={btnAdd}
-          >
+          <button className={clsx("super-btn", style.buyBtn)} onClick={btnAdd}>
             Купить
-          </Button>
+          </button>
         </div>
       </div>
     </>

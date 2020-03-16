@@ -1,17 +1,11 @@
 @import "./../../constants/variables.scss";
 
-.card {
-  // &:hover {
-  //   .img {
-  //     transform: scale(1.1);
-  //     filter: blur(0.5px) brightness(50%);
-  //   }
-  // }
-}
+// .card {
+// }
 
 .img {
   transition: all 0.7s;
-  width: 45%;
+  width: 25%;
   // height: 250px;
   margin: auto;
   &_wrp {
@@ -42,15 +36,13 @@
   justify-content: flex-end;
 }
 
-.bottleBtn {
-  border: 1px solid transparentize($colorBlack, 0.7);
+button.bottleBtn {
   padding: 5px 0px;
-  border-radius: 4px;
 }
 
 .icon {
   $size: 30px;
-  fill: $colorBlack;
+  fill: $colorWhite;
   width: $size;
   height: $size;
 }
@@ -80,23 +72,26 @@
 }
 
 .buyBtn {
+  font-size: 18px !important;
+
+  // margin: 0 !important;
   // transition: all 0.2s;
-  background-color: $colorAccent;
-  // padding: 0 20px;
-  letter-spacing: 1px;
-  border-radius: 6px;
-  height: auto;
-  color: $colorFontWhite;
-  width: 110px;
+  // background-color: $colorAccent;
+  // // padding: 0 20px;
+  // letter-spacing: 1px;
+  // border-radius: 6px;
+  // height: auto;
+  // color: $colorFontWhite;
+  // width: 110px;
 
-  &:hover {
-    background-color: darken($colorAccent, 5%);
-  }
+  // &:hover {
+  //   background-color: darken($colorAccent, 5%);
+  // }
 
-  &:focus,
-  &:active {
-    border: none;
-    color: $colorFontWhite !important;
-    background-color: $colorAccent !important;
-  }
+  // &:focus,
+  // &:active {
+  //   border: none;
+  //   color: $colorFontWhite !important;
+  //   background-color: $colorAccent !important;
+  // }
 }

@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import "reset-css";
 import App from "./App";
-import "./helpers/common.scss";
+import "./stylesheets/common.scss";
 import store from "./Redux/store";
 
 const Root = () => (

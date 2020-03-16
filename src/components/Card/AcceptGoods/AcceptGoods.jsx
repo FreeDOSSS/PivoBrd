@@ -1,8 +1,9 @@
 import { Modal, Typography } from "antd";
 import React, { useEffect, useState } from "react";
-import db from "./../../helpers/db";
+import db from "./../../../db/db";
 import * as style from "./AcceptGoods.module.scss";
-const { Title, Text } = Typography;
+
+const { Title } = Typography;
 
 function AcceptGoods({ show, onClose, id }) {
   const documentStyle = {
@@ -29,13 +30,25 @@ function AcceptGoods({ show, onClose, id }) {
         onCancel={onClose}
         footer={null}
       >
-        <Title level={3}>Вы добавили в корзину</Title>
+        <Title level={3} uppercase>
+          ВЫ ДОБАВИЛИ В КОРЗИНУ
+        </Title>
         <div className={style.wrp}>
           <div className={style.img_wrp}>
             <img src={item.img} className={style.img} alt={item.name} />
           </div>
           <div className={style.discription}>
             <Title level={4}>{item.discription}</Title>
+            <div className={style.btnGrooup}>
+              <button
+                onClick={onClose}
+                className={style.btnContin}
+                //  className="super-btn"
+              >
+                Продолжить покупки
+              </button>
+              <button className="super-btn">Перейти в корзину</button>
+            </div>
           </div>
         </div>
       </Modal>

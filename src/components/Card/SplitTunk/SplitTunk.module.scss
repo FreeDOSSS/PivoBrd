@@ -1,11 +1,12 @@
-@import "./../../constants/variables.scss";
+@import "./../../../constants/variables.scss";
 
 .pivo {
   display: flex;
 }
 
 .img {
-  height: 180px;
+  &_wrp {
+  }
 }
 
 .discription {
@@ -98,16 +99,17 @@
   align-items: center;
 }
 
-.buyBtn {
-  padding: 5px 10px;
-  background-color: $colorAccent;
+button.buyBtn {
+  // padding: 5px 10px;
+  // background: none;
+  // background-color: $coorAccent;
   color: $colorFontWhite;
   margin-left: 10px;
-  border-radius: 6px;
+  // border-radius: 6px;
   transition: all 0.5s;
 
   &:disabled {
-    background-color: rgb(131, 131, 131);
+    background: rgb(138, 138, 138);
   }
 }
 
