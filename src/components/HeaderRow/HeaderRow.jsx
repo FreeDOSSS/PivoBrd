@@ -3,12 +3,11 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import Container from "../Container/Container";
 import constants from "./../../constants/variables";
-import db from "./../../db/db";
 import * as style from "./HeaderRow.module.scss";
 import AsideGoods from "../AsideGoods";
+import goodsCalcTotal from "../../helpers/goodsCalcTotal";
 
 function HeaderRow({ city = "Бердянск", citys = "Бердянске", cart }) {
-  const [amount, setAmount] = useState(0);
   const [showCanvas, setShowCanvas] = useState(false);
 
   const hendlerButton = () => {
@@ -17,18 +16,6 @@ function HeaderRow({ city = "Бердянск", citys = "Бердянске", ca
   };
 
   // const showSliceBeer = () => {};
-
-  useEffect(() => {
-    if (cart.lenght === 0) return;
-
-    const total = cart.reduce(
-      (acc, el) =>
-        (acc += db.find(elem => elem.id === el.id).price * el.currentSize),
-      0
-    );
-
-    setAmount(total);
-  }, [cart]);
 
   return (
     <>
@@ -82,7 +69,7 @@ function HeaderRow({ city = "Бердянск", citys = "Бердянске", ca
             <svg className={style.icon}>
               <use href="#cart"></use>
             </svg>
-            <span className={style.circle}>{amount} грн.</span>
+            <span className={style.circle}>{goodsCalcTotal()} грн.</span>
           </button>
         </div>
       </Container>

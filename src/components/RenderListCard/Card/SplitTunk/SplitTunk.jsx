@@ -1,7 +1,7 @@
 import { Alert, Divider, Modal } from "antd";
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-import price from "./../../../db/price";
+import price from "./../../../../db/price";
 import * as style from "./SplitTunk.module.scss";
 
 // const { Title } = Typography;

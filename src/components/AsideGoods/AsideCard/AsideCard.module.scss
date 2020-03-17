@@ -1,0 +1,36 @@
+@import "./../../../constants/variables.scss";
+
+.card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.discription {
+  //   flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    width: 100%;
+  }
+}
+
+.img {
+  height: 100px;
+  margin: auto;
+  width: 60px;
+  &_wrp {
+    flex-basis: 60px;
+    width: 60px;
+  }
+}
+
+.title {
+  width: 70%;
+}
+.price {
+  align-self: flex-end;
+  text-align: right;
+  color: $colorFontBlack;
+  font-weight: 700;
+  font-size: 20px;
+}

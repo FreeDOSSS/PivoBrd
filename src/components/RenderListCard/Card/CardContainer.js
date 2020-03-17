@@ -1,5 +1,5 @@
 import Card from "./Card";
-import { addGoodsItem } from "./../../Redux/goods/goodsAction";
+import { addGoodsItem } from "./../../../Redux/goods/goodsAction";
 import { connect } from "react-redux";
 
 const mapDispatchToProps = dispatch => {

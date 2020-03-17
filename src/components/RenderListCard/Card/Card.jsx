@@ -11,7 +11,7 @@ function Card({ addGoods, item }) {
   // Модалка SplitTunk
   const [visible, setViseble] = useState(false);
   const showModal = () => setViseble(true);
-  const onClose = e => setViseble(false);
+  const onClose = () => setViseble(false);
 
   // Модалка Accept Goods
   const [acceptGoods, setAcceptGoods] = useState(false);
@@ -34,7 +34,6 @@ function Card({ addGoods, item }) {
       <SplitTunk
         show={visible}
         onClose={onClose}
-        addGoods={btnAdd}
         item={item}
         genSize={tunk}
         ink={ink}
