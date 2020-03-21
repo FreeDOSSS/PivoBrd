@@ -1,13 +1,13 @@
 import clsx from "clsx";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
+import goodsCalcTotal from "../../helpers/goodsCalcTotal";
+import AsideGoods from "../AsideGoods";
 import Container from "../Container/Container";
 import constants from "./../../constants/variables";
 import * as style from "./HeaderRow.module.scss";
-import AsideGoods from "../AsideGoods";
-import goodsCalcTotal from "../../helpers/goodsCalcTotal";
 
-function HeaderRow({ city = "Бердянск", citys = "Бердянске", cart }) {
+function HeaderRow({ city = "Бердянск", citys = "Бердянске", goods }) {
   const [showCanvas, setShowCanvas] = useState(false);
 
   const hendlerButton = () => {
@@ -69,7 +69,7 @@ function HeaderRow({ city = "Бердянск", citys = "Бердянске", ca
             <svg className={style.icon}>
               <use href="#cart"></use>
             </svg>
-            <span className={style.circle}>{goodsCalcTotal()} грн.</span>
+            <span className={style.circle}>{goodsCalcTotal(goods)} грн.</span>
           </button>
         </div>
       </Container>

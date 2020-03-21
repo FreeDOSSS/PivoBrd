@@ -22,7 +22,7 @@ function AsideGoods({ show, onHendler, goods }) {
   //   };
 
   useEffect(() => {
-    console.log("goodsCalcTotal(goods)", goodsCalcTotal(goods));
+    // console.log("goodsCalcTotal(goods)", goodsCalcTotal(goods));
   }, [goods]);
 
   return (
@@ -41,7 +41,9 @@ function AsideGoods({ show, onHendler, goods }) {
       {goods && goods.map(el => <AsideCard goods={el} key={el.id} />)}
       <Divider />
       {/* <p className={style.total}>Итого: {goodsCalcTotal(goods)} грн.</p> */}
-      <p className={style.total}>Итого: грн.</p>
+      <p className={style.total}>
+        Итого: {goods && goodsCalcTotal(goods)} грн.
+      </p>
     </Drawer>
   );
 }
