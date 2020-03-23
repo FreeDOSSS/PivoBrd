@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import goodsCalcTotal from "./../../helpers/goodsCalcTotal";
 import AsideCard from "./AsideCard";
 import * as style from "./AsideGoods.module.scss";
+import { Link } from "react-router-dom";
+import router from "../../router";
 
 function AsideGoods({ show, onHendler, goods }) {
   //   const [show, setShow] = useState(false);
@@ -34,7 +36,9 @@ function AsideGoods({ show, onHendler, goods }) {
       onClose={onHendler}
       footer={
         <footer className={style.footer}>
-          <button className="super-btn">Оформить заказ</button>
+          <Link to={router.goods.path} className="super-btn">
+            Оформить заказ
+          </Link>
         </footer>
       }
     >

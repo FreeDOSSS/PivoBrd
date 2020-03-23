@@ -25,19 +25,16 @@ function Menu() {
             activeClassName={style.activeLink}
           >
             {/* {router.home.title} */}
-            
             Закуски
           </NavLink>
         </li>
         <li className={style.item}>
           <NavLink
-            // to={router.home.path}
-            to="/atribute"
+            to={router.goods.path}
             className={style.link}
             activeClassName={style.activeLink}
           >
-            {/* {router.home.title} */}
-            Все для отдыха
+            Корзина
           </NavLink>
         </li>
       </ul>

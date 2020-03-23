@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import db from "./../../../db/db";
 import * as style from "./AsideCard.module.scss";
+import price from "./../../../db/price";
 
 function AsideCard({ goods }) {
   const [item, setItem] = useState(null);
@@ -11,8 +12,11 @@ function AsideCard({ goods }) {
 
   const totalPrice = () =>
     item.price * goods.currentSize +
-    goods.slice.reduce((acc, el) => console.log("el", el), 0);
-  // goods.slice.reduce((acc, el) => (acc += price[el.type] * el.count), 0);
+    goods.slice.reduce(
+      (acc, el) => (acc += price.bottle[el.type] * el.count),
+      0
+    );
+
   return (
     item && (
       <div className={style.card}>

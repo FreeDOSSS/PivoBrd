@@ -1,4 +1,5 @@
 import Home from "./../pages/Home";
+import Goods from "../pages/Goods";
 
 const router = {
   home: {
@@ -7,8 +8,8 @@ const router = {
     title: "Пиво"
   },
   goods: {
-    path: "/",
-    component: null
+    path: "/goods",
+    component: Goods
     // title: ""
   }
 };

@@ -17,6 +17,7 @@ const App = () => (
     </Affix>
     <Switch>
       <Route path={router.home.path} component={router.home.component} exact />
+      <Route path={router.goods.path} component={router.goods.component} />
       <Redirect to={router.home.path} />
     </Switch>
   </>

@@ -13,6 +13,13 @@ export const addGoodsItem = ({ id, currentSize, slice = [] }) => {
   };
 };
 
+export const removeGoods = id => ({
+  type: types.REMOVE_GOODS_ITEM,
+  payload: {
+    id
+  }
+});
+
 // export const saveBudget = budget => {
 //   return {
 //     type: types.SAVE_BUDGET,
