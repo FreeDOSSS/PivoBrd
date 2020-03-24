@@ -13,10 +13,11 @@ export const addGoodsItem = ({ id, currentSize, slice = [] }) => {
   };
 };
 
-export const removeGoods = id => ({
+export const removeGoods = ({ id, size }) => ({
   type: types.REMOVE_GOODS_ITEM,
   payload: {
-    id
+    id,
+    size
   }
 });
 

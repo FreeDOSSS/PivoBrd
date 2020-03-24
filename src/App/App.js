@@ -9,12 +9,12 @@ import router from "./../router";
 const App = () => (
   <>
     <SvgSprite />
-    <Affix offsetTop={0}>
+    {/* <Affix offsetTop={0}>
       <div>
         <HeaderRow />
         <Menu />
       </div>
-    </Affix>
+    </Affix> */}
     <Switch>
       <Route path={router.home.path} component={router.home.component} exact />
       <Route path={router.goods.path} component={router.goods.component} />

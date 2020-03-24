@@ -8,7 +8,9 @@ const goodsReducer = (state = [], action) => {
       return [...state, payload.beer];
 
     case types.REMOVE_GOODS_ITEM:
-      return state.filter(el => el.id !== payload.id);
+      return state.filter(
+        el => el.id !== payload.id && el.currentSize !== payload.size
+      );
 
     default:
       return state;

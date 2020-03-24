@@ -1,0 +1,45 @@
+.wrp {
+  min-height: 100vh;
+  background: url(./../../assets/images/header.jpg) no-repeat center center
+    cover;
+  background-image: url(./../../assets/images/header.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-position 0.5s ease-in-out;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+  }
+}
+
+.img {
+  width: 300px;
+  position: absolute;
+  z-index: 0;
+  &.bokal {
+    bottom: -50px;
+    left: 100px;
+    transform: translate();
+  }
+
+  &.hmel {
+    bottom: 100px;
+    right: 200px;
+    // width: 300px;
+  }
+
+  &.pheno {
+    bottom: 150px;
+    right: 150px;
+    width: 400px;
+  }
+}

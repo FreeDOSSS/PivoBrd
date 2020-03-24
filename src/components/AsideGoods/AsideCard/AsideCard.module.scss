@@ -3,6 +3,7 @@
 .card {
   display: flex;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .discription {
@@ -33,4 +34,10 @@
   color: $colorFontBlack;
   font-weight: 700;
   font-size: 20px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
