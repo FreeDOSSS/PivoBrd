@@ -1,10 +1,8 @@
 import { CloseOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import db from "./../../../db/db";
-import price from "./../../../db/price";
-import * as style from "./AsideCard.module.scss";
-
 import goodsCalcTotal from "./../../../helpers/goodsCalcTotal";
+import * as style from "./AsideCard.module.scss";
 
 function AsideCard({ goods, onDelete }) {
   const [item, setItem] = useState(null);

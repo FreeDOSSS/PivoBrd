@@ -1,0 +1,30 @@
+@import "./../../constants/variables.scss";
+
+.parallax {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 200px;
+  background-image: url(https://thecity.m24.ru/b/c/10435.1200x600.jpg);
+  position: relative;
+
+  margin-bottom: 20px;
+
+  .title {
+    background-color: transparentize(#000, 0.6);
+    position: absolute;
+    $p: 20px;
+    top: $p;
+    bottom: $p;
+    right: $p;
+    left: $p;
+    border: 1px solid $colorWhite;
+    color: $colorFontWhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rose";
+    font-size: 50px;
+  }
+}

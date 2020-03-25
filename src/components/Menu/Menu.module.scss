@@ -1,20 +1,39 @@
 @import "./../../constants/variables.scss";
 
 .wrp {
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  // box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
   background-color: transparentize($colorBlack, $amount: 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 10px 0;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  color: #fff;
+}
+
+.rightBlock {
+  align-self: center;
+  text-transform: uppercase;
+  color: $colorFontWhite;
 }
 
 .menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item {
-  margin-right: 20px;
+  // margin-right: 20px;
 }
 
 .link {
-  padding: 15px 20px;
+  padding: 0 10px;
   display: block;
   font-size: 18px;
   letter-spacing: 1px;
@@ -28,4 +47,28 @@
 
 .activeLink {
   color: $colorAccent;
+}
+
+.logo {
+  height: 50px;
+}
+
+.icon {
+  $size: 50px;
+  width: $size;
+  height: $size;
+  fill: $colorWhite;
+
+  &_wrp {
+    // margin-right: 5px;
+    margin-left: auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.cart_title {
+  color: $colorFontWhite;
+  font-weight: bold;
 }
