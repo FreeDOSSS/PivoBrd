@@ -1,0 +1,47 @@
+@import "./../../constants/variables.scss";
+
+.wrp {
+  background-image: url(./../../assets/images/footer.jpg);
+  background-repeat: no-repeat;
+  background-position: center 99%;
+  background-size: cover;
+}
+
+.box {
+  // padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  > * {
+    width: 100%;
+  }
+}
+
+.name {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 100px 0;
+}
+
+.copyrate {
+  padding: 20px 0;
+  align-self: flex-end;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+
+  a {
+    color: $colorAccent;
+    display: inline;
+    padding-left: 10px;
+  }
+
+  &__wrp {
+    background-color: $colorBlack;
+  }
+}

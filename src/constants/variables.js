@@ -1,3 +1,3 @@
 export default {
-  phone: "050 000 00 00"
+  phone: "098 152 86 95"
 };

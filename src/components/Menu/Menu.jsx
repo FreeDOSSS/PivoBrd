@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import router from "./../../router/router";
-import Container from "../Container/Container";
-import * as style from "./Menu.module.scss";
 import goodsCalcTotal from "../../helpers/goodsCalcTotal";
-import AsideGoods from "../AsideGoods/AsideGoods";
+import AsideGoods from "../AsideGoods";
+import Container from "../Container";
+import router from "./../../router/router";
+import * as style from "./Menu.module.scss";
+
+import vars from "./../../constants/variables";
+
+const { phone } = vars;
 
 // import logo from "./../../assets/images/";
 
@@ -14,6 +18,8 @@ function Menu({ goods }) {
   const hendlerButton = () => {
     setShowCanvas(!showCanvas);
   };
+
+  console.log("typeof vars.phone", typeof vars.phone);
 
   return (
     <>
@@ -49,13 +55,12 @@ function Menu({ goods }) {
             />
           </li>
           <li className={style.item}>
-            <NavLink
-              to={router.goods.path}
-              className={style.link}
-              activeClassName={style.activeLink}
+            <a
+              href={`tel:${phone.replace(/\s/g, "")}`}
+              className={style.outsideeLink}
             >
-              Телефон
-            </NavLink>
+              {phone}
+            </a>
           </li>
           <li className={style.item}>
             <NavLink

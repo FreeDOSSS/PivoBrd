@@ -1,11 +1,8 @@
-import React from "react";
-import * as style from "./TopBaner.module.scss";
-
+import clsx from "clsx";
+import React, { createRef } from "react";
 import bokal from "./../../assets/images/bokal.png";
 import hmel from "./../../assets/images/hmel.png";
-import psheno from "./../../assets/images/phenica.png";
-import clsx from "clsx";
-import { createRef } from "react";
+import * as style from "./TopBaner.module.scss";
 
 function TopBaner({ title = "Ytn" }) {
   const startX = -50;
@@ -13,7 +10,6 @@ function TopBaner({ title = "Ytn" }) {
 
   const bokalRef = createRef();
   const hmelRef = createRef();
-  const pshenoRef = createRef();
 
   const onMouseMove = e => {
     const { clientX, clientY, target } = e;
@@ -27,7 +23,6 @@ function TopBaner({ title = "Ytn" }) {
 
     bokalRef.current.style.transform = `translate(${x}px, ${y}px)`;
     hmelRef.current.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
-    pshenoRef.current.style.transform = `translate(${x * 3}px, ${y * 3}px)`;
 
     // console.log("bokalRef", bokalRef);
     // target.style.backgroundPosition = `${x}px ${y}px`;
@@ -47,13 +42,6 @@ function TopBaner({ title = "Ytn" }) {
         className={clsx(style.img, style.hmel)}
         ref={hmelRef}
       />
-      <img
-        src={psheno}
-        alt="psheno"
-        className={clsx(style.img, style.pheno)}
-        ref={pshenoRef}
-      />
-
       <div className={style.container}>
         <h2 className={style.title}>{title}</h2>
       </div>
