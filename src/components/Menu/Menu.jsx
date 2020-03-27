@@ -29,6 +29,7 @@ function Menu({ goods }) {
         <ul className={style.menu}>
           <li className={style.item}>
             <NavLink
+              exact
               to={router.home.path}
               className={style.link}
               activeClassName={style.activeLink}

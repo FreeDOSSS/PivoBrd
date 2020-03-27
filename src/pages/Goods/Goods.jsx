@@ -1,12 +1,16 @@
 import React from "react";
 import Container from "../../components/Container/Container";
 import * as style from "./Goods.module.scss";
+import TopBaner from "./../../components/TopBaner";
 
 function Goods({ goods }) {
   return (
-    <Container>
-      <div className={style.wp}>ыф</div>
-    </Container>
+    <>
+      <TopBaner title="Корзина" />
+      <Container>
+        <div className={style.wp}>ыф</div>
+      </Container>
+    </>
   );
 }
 

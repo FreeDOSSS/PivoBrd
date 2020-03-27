@@ -9,6 +9,9 @@ function Home() {
       <TopBaner title="Доставка живого пива на дом" />
       <Parallax title="Запорожский пивоварный завод ВИСТ" />
       <RenderListCard name="vist" />
+      <Parallax title="Лисичанский пивоварный завод СИЧ" />
+      <RenderListCard name="sich" />
+      <br />
     </>
   );
 }

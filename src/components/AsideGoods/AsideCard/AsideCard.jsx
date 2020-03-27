@@ -12,16 +12,17 @@ function AsideCard({ goods, onDelete }) {
   }, [goods]);
 
   const totalPrice = () => goodsCalcTotal([goods]);
-  // item.price * goods.currentSize +
-  // goods.slice.reduce(
-  // (acc, el) => (acc += price.bottle[el.type] * el.count),
-  // 0
-  // );
+
+  const hendlerDelete = () => onDelete(goods._id);
 
   return (
     item && (
       <div className={style.card}>
-        <button type="button" className={style.closeBtn}>
+        <button
+          type="button"
+          className={style.closeBtn}
+          onClick={hendlerDelete}
+        >
           <CloseOutlined style={{ color: "red", fontSize: "18px" }} />
         </button>
         <div className={style.img_wrp}>

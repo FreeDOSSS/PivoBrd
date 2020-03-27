@@ -1,4 +1,5 @@
 import * as types from "./goodsTypes";
+import shortid from "shortid";
 
 export const addGoodsItem = ({ id, currentSize, slice = [] }) => {
   return {
@@ -7,19 +8,21 @@ export const addGoodsItem = ({ id, currentSize, slice = [] }) => {
       beer: {
         id,
         currentSize,
-        slice
+        slice,
+        _id: shortid.generate()
       }
     }
   };
 };
 
-export const removeGoods = ({ id, size }) => ({
-  type: types.REMOVE_GOODS_ITEM,
-  payload: {
-    id,
-    size
-  }
-});
+export const removeGoods = _id => {
+  return {
+    type: types.REMOVE_GOODS_ITEM,
+    payload: {
+      _id
+    }
+  };
+};
 
 // export const saveBudget = budget => {
 //   return {

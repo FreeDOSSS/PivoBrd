@@ -1,13 +1,12 @@
 import React from "react";
 import * as style from "./Parallax.module.scss";
-import ReactWOW from "react-wow";
 
 function Parallax({ title = "" }) {
   return (
     <div className={style.parallax}>
       <h2 className={style.title}>{title}</h2>
 
-      <ReactWOW
+      {/* <ReactWOW
         animation="fadeInLeft"
         duration="2000"
         iteration="1"
@@ -16,7 +15,7 @@ function Parallax({ title = "" }) {
         <svg className={style.icon}>
           <use href="#devider"> </use>
         </svg>
-      </ReactWOW>
+      </ReactWOW> */}
     </div>
   );
 }

@@ -1,7 +1,14 @@
-import vist_gold from "./../assets/images/vist_gold.jpg";
-import vist_mos from "./../assets/images/vist_mos.jpg";
-import vist_night from "./../assets/images/vist_night.jpg";
-import vist_g from "./../assets/images/vist_g.jpg";
+import sich_95 from "./../assets/images/sich/sich-95.jpg";
+import sich_chumak from "./../assets/images/sich/sich-chumak.jpg";
+import sich_g from "./../assets/images/sich/sich-g.jpg";
+import sich_kegler from "./../assets/images/sich/sich-kegler.jpg";
+import sich_mos_filter from "./../assets/images/sich/sich-mos_filter.jpg";
+import sich_mos_notfilter from "./../assets/images/sich/sich-mos_notfilter.jpg";
+import sich_med from "./../assets/images/sich/sich_med.jpg";
+import vist_g from "./../assets/images/vist/vist_g.jpg";
+import vist_gold from "./../assets/images/vist/vist_gold.jpg";
+import vist_mos from "./../assets/images/vist/vist_mos.jpg";
+import vist_night from "./../assets/images/vist/vist_night.jpg";
 
 const db = [
   // ВИСТ
@@ -61,8 +68,7 @@ const db = [
     deg: "4,1",
     color: "Светлое",
     type: "Фильтрованное",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+    img: sich_g
   },
   {
     id: "006",
@@ -74,8 +80,7 @@ const db = [
     deg: "4.8",
     color: "Светлое",
     type: "Фильтрованное",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+    img: sich_mos_filter
   },
   {
     id: "007",
@@ -86,9 +91,8 @@ const db = [
     price: 24,
     deg: "4.8",
     color: "Светлое",
-    type: "Фильтрованное",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+    type: "Не фильтрованное",
+    img: sich_mos_notfilter
   },
   {
     id: "008",
@@ -100,8 +104,7 @@ const db = [
     deg: "4.8",
     color: "Темное",
     type: "Фильтрованное",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+    img: sich_chumak
   },
   {
     id: "009",
@@ -113,8 +116,7 @@ const db = [
     deg: "4.8",
     color: "Светлое",
     type: "Фильтрованное",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+    img: sich_med
   },
   {
     id: "010",
@@ -126,8 +128,7 @@ const db = [
     deg: "4.8",
     color: "Светлое",
     type: "Фильтрованное",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+    img: sich_95
   },
   {
     id: "011",
@@ -139,8 +140,7 @@ const db = [
     deg: "4.8",
     color: "Светлое",
     type: "Фильтрованное",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+    img: sich_kegler
   },
   // Диморис
   {
@@ -153,8 +153,7 @@ const db = [
     deg: "4.8",
     color: "Светлое",
     type: "Фильтрованное",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+    img: ""
   },
   {
     id: "013",
@@ -166,8 +165,7 @@ const db = [
     deg: "4.8",
     color: "Темное",
     type: "Фильтрованное",
-    img:
-      "https://chilipizza.net/wp-content/uploads/2019/03/hoegaarden-witbier-600x400.png"
+    img: ""
   }
 ];
 
