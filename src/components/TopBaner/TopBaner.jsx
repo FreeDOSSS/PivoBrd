@@ -44,6 +44,9 @@ function TopBaner({ title = "Ytn" }) {
       />
       <div className={style.container}>
         <h2 className={style.title}>{title}</h2>
+        <svg className={style.icon}>
+          <use href="#devider"></use>
+        </svg>
       </div>
     </div>
   );

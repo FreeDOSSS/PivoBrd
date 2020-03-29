@@ -99,33 +99,24 @@
   align-items: center;
 }
 
-button.buyBtn {
-  // padding: 5px 10px;
-  // background: none;
-  // background-color: $coorAccent;
-  color: $colorFontWhite;
-  margin-left: 10px;
-  // border-radius: 6px;
-  transition: all 0.5s;
-
-  &:disabled {
-    background: rgb(138, 138, 138);
+button {
+  &.autoSplit {
+    margin-left: auto;
+    color: $colorFontWhite;
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
   }
-}
 
-.item_enter {
-  opacity: 0;
-}
-.item_enter_active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-.item_exit {
-  opacity: 1;
-}
-.item_exit_active {
-  opacity: 0;
-  transition: opacity 500ms ease-in;
+  &.buyBtn {
+    color: $colorFontWhite;
+    margin-left: 10px;
+    transition: all 0.5s;
+
+    &:disabled {
+      background: rgb(138, 138, 138);
+    }
+  }
 }
 
 @keyframes showRow {

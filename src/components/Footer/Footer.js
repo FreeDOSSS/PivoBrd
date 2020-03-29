@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import Container from "./../Container";
 import * as style from "./Footer.module.scss";

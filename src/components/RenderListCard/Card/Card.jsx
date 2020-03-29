@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import AcceptGoods from "./AcceptGoods";
 import SplitTunk from "./SplitTunk";
 import * as style from "./Card.module.scss";
+import splitBottle from "../../../helpers/splitBottle";
 
 function Card({ addGoods, item }) {
   const [tunk, setTunk] = useState(0.5);
@@ -25,7 +26,11 @@ function Card({ addGoods, item }) {
 
   // Кнопка купить под картой
   const btnAdd = () => {
-    addGoods({ id: item.id, currentSize: Number(tunk) });
+    addGoods({
+      id: item.id,
+      currentSize: Number(tunk),
+      slice: splitBottle(Number(tunk))
+    });
     showAccept();
   };
 

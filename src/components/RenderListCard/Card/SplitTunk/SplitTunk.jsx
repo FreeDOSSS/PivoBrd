@@ -3,6 +3,7 @@ import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 import price from "./../../../../db/price";
 import * as style from "./SplitTunk.module.scss";
+import splitBottle from "../../../../helpers/splitBottle";
 
 // const { Title } = Typography;
 
@@ -126,6 +127,32 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
       slice: totalBottle
     });
     onClose();
+  };
+
+  // Кнопка Розлить
+  const hendlerSplitBtn = () => {
+    splitBottle(genSize).forEach(el => {
+      console.log("el", el);
+      switch (el.type) {
+        case "3":
+          setBottle_3(el.count);
+          break;
+        case "2":
+          setBottle_2(el.count);
+          break;
+        case "1.5":
+          setBottle_15(el.count);
+          break;
+        case "1":
+          setBottle_1(el.count);
+          break;
+        case "0.5":
+          setBottle_05(el.count);
+          break;
+        default:
+          return;
+      }
+    });
   };
 
   return (
@@ -289,6 +316,14 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
               </div>
             </div>
           </div>
+
+          <button
+            type="button"
+            className={clsx("super-btn", style.autoSplit)}
+            onClick={hendlerSplitBtn}
+          >
+            Розлить автоматически
+          </button>
 
           {reduceBootle() > 0 && (
             <>

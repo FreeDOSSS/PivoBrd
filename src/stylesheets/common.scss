@@ -108,3 +108,7 @@ ul {
     max-width: 500px;
   }
 }
+
+.ant-divider-horizontal.ant-divider-with-text-left::after {
+  border-color: #c5c5c5;
+}
