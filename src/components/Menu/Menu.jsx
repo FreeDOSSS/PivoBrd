@@ -3,14 +3,11 @@ import { NavLink } from "react-router-dom";
 import goodsCalcTotal from "../../helpers/goodsCalcTotal";
 import AsideGoods from "../AsideGoods";
 import Container from "../Container";
+import vars from "./../../constants/variables";
 import router from "./../../router/router";
 import * as style from "./Menu.module.scss";
 
-import vars from "./../../constants/variables";
-
 const { phone } = vars;
-
-// import logo from "./../../assets/images/";
 
 function Menu({ goods }) {
   const [showCanvas, setShowCanvas] = useState(false);
@@ -18,8 +15,6 @@ function Menu({ goods }) {
   const hendlerButton = () => {
     setShowCanvas(!showCanvas);
   };
-
-  console.log("typeof vars.phone", typeof vars.phone);
 
   return (
     <>

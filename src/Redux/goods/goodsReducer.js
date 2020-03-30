@@ -1,6 +1,36 @@
 import * as types from "./goodsTypes";
 
-const goodsReducer = (state = [], action) => {
+const initialState = [
+  {
+    id: "001",
+    currentSize: 0.5,
+    slice: [
+      {
+        type: "3",
+        count: 0
+      },
+      {
+        type: "2",
+        count: 0
+      },
+      {
+        type: "1.5",
+        count: 0
+      },
+      {
+        type: "1",
+        count: 0
+      },
+      {
+        type: "0.5",
+        count: 1
+      }
+    ],
+    _id: "M2y4Tct5O"
+  }
+];
+
+const goodsReducer = (state = [...initialState], action) => {
   const { type, payload } = action;
 
   switch (type) {

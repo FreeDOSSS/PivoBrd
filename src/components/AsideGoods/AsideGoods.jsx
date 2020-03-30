@@ -6,9 +6,9 @@ import router from "../../router";
 import goodsCalcTotal from "./../../helpers/goodsCalcTotal";
 import AsideCard from "./AsideCard";
 import * as style from "./AsideGoods.module.scss";
+import shortid from "shortid";
 
 function AsideGoods({ goods, show, onHendler }) {
-  console.log("goods", goods);
   return (
     <Drawer
       title="Корзина"
@@ -24,7 +24,8 @@ function AsideGoods({ goods, show, onHendler }) {
         </footer>
       }
     >
-      {goods && goods.map(el => <AsideCard goods={el} key={el.id} />)}
+      {goods &&
+        goods.map(el => <AsideCard goods={el} key={shortid.generate()} />)}
       <Divider />
       <p className={style.total}>
         Итого: {goods && goodsCalcTotal(goods)} грн.

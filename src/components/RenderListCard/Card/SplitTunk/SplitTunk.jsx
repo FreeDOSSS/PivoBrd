@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import price from "./../../../../db/price";
 import * as style from "./SplitTunk.module.scss";
 import splitBottle from "../../../../helpers/splitBottle";
+import shortid from "shortid";
 
 // const { Title } = Typography;
 
@@ -332,7 +333,7 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
                 el.count > 0 ? (
                   <div
                     className={clsx(style.row, style.animShowRow)}
-                    key={el.type}
+                    key={shortid.generate()}
                   >
                     <p className={style.name}>Бутылка {el.type} л.</p>
                     <p className={style.price}>

@@ -1,0 +1,39 @@
+@import "./../../constants/variables.scss";
+.box {
+  display: grid;
+
+  grid-template-areas:
+    "img title title title title"
+    "img bottle slice edit del";
+  grid-template-columns: 100px repeat(4, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+.img_wrp {
+  grid-area: img;
+  padding: 0 20px;
+}
+
+.title {
+  grid-area: title;
+  padding: 20px 0px;
+  color: $colorFontBlack;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+.bottle {
+  grid-area: bottle;
+}
+
+.slice {
+  grid-area: slice;
+}
+
+.edit {
+  grid-area: edit;
+}
+
+.del {
+  grid-area: del;
+}

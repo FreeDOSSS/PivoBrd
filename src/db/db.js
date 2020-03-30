@@ -10,6 +10,9 @@ import vist_gold from "./../assets/images/vist/vist_gold.jpg";
 import vist_mos from "./../assets/images/vist/vist_mos.jpg";
 import vist_night from "./../assets/images/vist/vist_night.jpg";
 
+import dimoris_light from "./../assets/images/bovar/light.jpg";
+import dimoris_dark from "./../assets/images/bovar/dark.jpg";
+
 const db = [
   // ВИСТ
   {
@@ -49,9 +52,9 @@ const db = [
     id: "004",
     brend: "Запорожская ночь",
     category: "vist",
-    discription: "ПИВО ЗАПОРОЖСКАЯ НОЧЬ Полутёмное ФИЛЬТРОВАННОЕ 4,1°",
+    discription: "ПИВО ЗАПОРОЖСКАЯ НОЧЬ Полутёмное ФИЛЬТРОВАННОЕ 4,1% об.",
     price: 26,
-    deg: "4,1",
+    deg: "4,1%",
     color: "Полутёмное",
     type: "Фильтрованное",
     img: vist_night
@@ -62,8 +65,7 @@ const db = [
     id: "005",
     brend: "Жигулевское",
     category: "sich",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 4,1%",
+    discription: "ПИВО Жигулевское СВЕТЛОЕ ФИЛЬТРОВАННОЕ 3.7% об.",
     price: 22,
     deg: "4,1",
     color: "Светлое",
@@ -74,8 +76,7 @@ const db = [
     id: "006",
     brend: "Московское",
     category: "sich",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    discription: "ПИВО Московское СВЕТЛОЕ ФИЛЬТРОВАННОЕ 4.7% об.",
     price: 23,
     deg: "4.8",
     color: "Светлое",
@@ -86,20 +87,18 @@ const db = [
     id: "007",
     brend: "Московское",
     category: "sich",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    discription: "ПИВО Московское СВЕТЛОЕ НеФИЛЬТРОВАННОЕ 5.2% об.",
     price: 24,
     deg: "4.8",
     color: "Светлое",
-    type: "Не фильтрованное",
+    type: " фильтрованное",
     img: sich_mos_notfilter
   },
   {
     id: "008",
     brend: "Чумацкое",
     category: "sich",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    discription: "ПИВО Чумацкое Темное ФИЛЬТРОВАННОЕ 4.3% об.",
     price: 24,
     deg: "4.8",
     color: "Темное",
@@ -110,8 +109,7 @@ const db = [
     id: "009",
     brend: "Медовое",
     category: "sich",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    discription: "ПИВО Медовое СВЕТЛОЕ ФИЛЬТРОВАННОЕ 4.7% об.",
     price: 24,
     deg: "4.8",
     color: "Светлое",
@@ -122,8 +120,7 @@ const db = [
     id: "010",
     brend: "95",
     category: "sich",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    discription: "ПИВО 95 «LEGO WEIZE» СВЕТЛОЕ ФИЛЬТРОВАННОЕ 5% об.",
     price: 24,
     deg: "4.8",
     color: "Светлое",
@@ -134,8 +131,7 @@ const db = [
     id: "011",
     brend: "Kegler Brielle",
     category: "sich",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    discription: "ПИВО Kegler Brielle СВЕТЛОЕ ФИЛЬТРОВАННОЕ 5% об.",
     price: 25,
     deg: "4.8",
     color: "Светлое",
@@ -147,25 +143,23 @@ const db = [
     id: "012",
     brend: "Южная Бавария",
     category: "dimoris",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    discription: "ПИВО Южная Бавария СВЕТЛОЕ ФИЛЬТРОВАННОЕ 4.6% об.",
     price: 24,
     deg: "4.8",
     color: "Светлое",
     type: "Фильтрованное",
-    img: ""
+    img: dimoris_light
   },
   {
     id: "013",
     brend: "Южная Бавария",
     category: "dimoris",
-    discription:
-      "ПИВО FDB AROUND THE WORLD «LEGO WEIZE» СВЕТЛОЕ НЕФИЛЬТРОВАННОЕ 6.8°",
+    discription: "ПИВО Южная Бавария Темное ФИЛЬТРОВАННОЕ 4.6% об.",
     price: 24,
     deg: "4.8",
     color: "Темное",
     type: "Фильтрованное",
-    img: ""
+    img: dimoris_dark
   }
 ];
 
