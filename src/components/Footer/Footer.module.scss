@@ -36,10 +36,18 @@
   justify-content: space-between;
   text-transform: uppercase;
 
+  .left {
+    color: $colorAccent;
+
+    a {
+      color: $colorFontWhite;
+    }
+  }
+
   a {
     color: $colorAccent;
     display: inline;
-    padding-left: 10px;
+    padding: 0 10px;
   }
 
   &__wrp {

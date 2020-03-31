@@ -22,3 +22,14 @@ function Goods({ goods }) {
 }
 
 export default Goods;
+
+/*
+Имя 
+Телефон
+Адресс
+Нужна сдачас с ?
+
+
+
+
+*/

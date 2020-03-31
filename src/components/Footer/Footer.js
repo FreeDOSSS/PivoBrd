@@ -3,6 +3,10 @@ import React from "react";
 import Container from "./../Container";
 import * as style from "./Footer.module.scss";
 
+import vars from "./../../constants/variables";
+
+const { phone_call_hot } = vars;
+
 function Footer() {
   const getYear = () => new Date().getFullYear();
   return (
@@ -12,13 +16,18 @@ function Footer() {
       </Container>
       <Container container={style.copyrate} wrp={style.copyrate__wrp}>
         <p className={style.left}>
-          © {getYear()} pivasov.com все прова защищены.
+          {/* © {getYear()} pivasov. Горячая линия */}
+          Горячая линия
+          <a href={`tel:${phone_call_hot.replace(/\s/g, "")}`}>
+            {phone_call_hot}
+          </a>
         </p>
         <p className={style.right}>
           САЙТ РАЗРАБОТАН
           <a href="https://webcreate.pro" target="_blank">
             WEBCREATE.PRO
           </a>
+          © {getYear()}
         </p>
       </Container>
     </>

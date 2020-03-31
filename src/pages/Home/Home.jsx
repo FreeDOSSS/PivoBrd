@@ -6,7 +6,7 @@ import TopBaner from "./../../components/TopBaner";
 function Home() {
   return (
     <>
-      <TopBaner title="Доставка живого пива на дом" />
+      <TopBaner title="Доставка живого пива" />
       <Title title="Запорожский пивоварный завод ВИСТ" />
       <RenderListCard name="vist" />
       <Title title="Лисичанский пивоварный завод СИЧ" />

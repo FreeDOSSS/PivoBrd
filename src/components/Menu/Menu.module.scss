@@ -7,20 +7,84 @@
   top: 0;
   left: 0;
   z-index: 100;
-  padding: 10px 0;
+  // padding: 10px 0;
 }
 
 .box {
-  display: grid;
-  grid-template-columns: 300px 1fr 300px;
+  display: flex;
+  justify-content: space-between;
   color: #fff;
+  font-family: $musio;
 }
 
-.rightBlock {
-  align-self: center;
-  text-transform: uppercase;
-  color: $colorFontWhite;
+.phoneIcon {
+  $size: 20px;
+
+  fill: $colorAccent;
+  width: $size;
+  height: $size;
+  margin-right: 10px;
 }
+
+.left {
+  display: flex;
+  align-items: center;
+  // font-size: 16px;
+  > * {
+    margin-right: 20px;
+  }
+  a {
+    color: $colorFontWhite;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+
+  > * {
+    margin-left: 10px;
+  }
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+
+  &_wrp {
+    padding: 10px 0;
+  }
+}
+.divider {
+  height: 100%;
+  border-right: 1px solid transparentize($colorWhite, 0.5);
+}
+
+.city {
+  color: $colorAccent;
+}
+
+.icon {
+  $size: 40px;
+  width: $size;
+  height: $size;
+  fill: $colorWhite;
+
+  &_wrp {
+    margin-left: auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// .rightBlock {
+//   align-self: center;
+//   text-transform: uppercase;
+//   color: $colorFontWhite;
+// }
 
 .menu {
   display: flex;
@@ -29,15 +93,17 @@
 }
 
 .item {
-  // margin-right: 20px;
+  margin-right: 10px;
+  text-transform: uppercase;
 }
 
 .link {
   padding: 0 10px;
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 1px;
   color: $colorFontWhite;
+  text-transform: capitalize;
 
   &:hover {
     color: $colorFontWhite;
@@ -49,26 +115,7 @@
   color: $colorAccent;
 }
 
-.logo {
-  height: 50px;
-}
-
-.icon {
-  $size: 50px;
-  width: $size;
-  height: $size;
-  fill: $colorWhite;
-
-  &_wrp {
-    // margin-right: 5px;
-    margin-left: auto;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-  }
-}
-
 .cart_title {
   color: $colorFontWhite;
-  font-weight: bold;
+  // font-weight: bold;
 }

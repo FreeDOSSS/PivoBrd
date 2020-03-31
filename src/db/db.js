@@ -138,6 +138,7 @@ const db = [
     type: "Фильтрованное",
     img: sich_kegler
   },
+
   // Диморис
   {
     id: "012",
