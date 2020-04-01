@@ -18,7 +18,11 @@ function AsideGoods({ goods, show, onHendler }) {
       onClose={onHendler}
       footer={
         <footer className={style.footer}>
-          <Link to={router.goods.path} className="super-btn">
+          <Link
+            to={router.goods.path}
+            className="super-btn"
+            onClick={onHendler}
+          >
             Оформить заказ
           </Link>
         </footer>

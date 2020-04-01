@@ -1,17 +1,17 @@
-import sich_95 from "./../assets/images/sich/sich-95.jpg";
-import sich_chumak from "./../assets/images/sich/sich-chumak.jpg";
-import sich_g from "./../assets/images/sich/sich-g.jpg";
-import sich_kegler from "./../assets/images/sich/sich-kegler.jpg";
-import sich_mos_filter from "./../assets/images/sich/sich-mos_filter.jpg";
-import sich_mos_notfilter from "./../assets/images/sich/sich-mos_notfilter.jpg";
-import sich_med from "./../assets/images/sich/sich_med.jpg";
-import vist_g from "./../assets/images/vist/vist_g.jpg";
-import vist_gold from "./../assets/images/vist/vist_gold.jpg";
-import vist_mos from "./../assets/images/vist/vist_mos.jpg";
-import vist_night from "./../assets/images/vist/vist_night.jpg";
+import sich_95 from "./../assets/images/sich/sich-95.png";
+import sich_chumak from "./../assets/images/sich/sich-chumak.png";
+import sich_g from "./../assets/images/sich/sich-g.png";
+import sich_kegler from "./../assets/images/sich/sich-kegler.png";
+import sich_mos_filter from "./../assets/images/sich/sich-mos_filter.png";
+import sich_mos_notfilter from "./../assets/images/sich/sich-mos_notfilter.png";
+import sich_med from "./../assets/images/sich/sich_med.png";
+import vist_g from "./../assets/images/vist/vist_g.png";
+import vist_gold from "./../assets/images/vist/vist_gold.png";
+import vist_mos from "./../assets/images/vist/vist_mos.png";
+import vist_night from "./../assets/images/vist/vist_night.png";
 
-import dimoris_light from "./../assets/images/bovar/light.jpg";
-import dimoris_dark from "./../assets/images/bovar/dark.jpg";
+import dimoris_light from "./../assets/images/bovar/light.png";
+import dimoris_dark from "./../assets/images/bovar/dark.png";
 
 const db = [
   // ВИСТ

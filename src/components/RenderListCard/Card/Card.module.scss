@@ -1,6 +1,18 @@
 @import "./../../../constants/variables.scss";
 
 .card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  // flex-direction: column;
+
+  > * {
+    // flex-shrink: 0;
+  }
+  .bottom {
+    align-self: flex-end;
+  }
+
   &:hover {
     img {
       transform: scale(1.2);
@@ -31,12 +43,15 @@
   color: $colorFontBlack;
   font-size: 18px;
   font-weight: 700;
+  // align-self: flex-end;
   text-align: right;
+  // margin-left: auto;
   // padding-right: 20px;
   margin-bottom: 20px;
 }
 
 .control {
+  align-self: flex-end;
   display: flex;
   justify-content: flex-end;
 }
