@@ -1,5 +1,8 @@
-import Home from "./../pages/Home";
-import Goods from "../pages/Goods";
+import { lazy } from "react";
+
+const Home = lazy(() => import("./../pages/Home"));
+const Goods = lazy(() => import("./../pages/Goods"));
+const Sidre = lazy(() => import("./../pages/Sidre"));
 
 const router = {
   home: {
@@ -10,7 +13,16 @@ const router = {
   goods: {
     path: "/goods",
     component: Goods
-    // title: ""
+  },
+  sidre: {
+    path: "/sidre",
+    component: Sidre,
+    title: "Сидр"
+  },
+  zakuski: {
+    path: "/sidre",
+    component: Sidre,
+    title: "Закуски"
   }
 };
 

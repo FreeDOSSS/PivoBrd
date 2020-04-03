@@ -17,105 +17,125 @@
   font-family: $musio;
 }
 
-.phoneIcon {
-  $size: 20px;
-
-  fill: $colorAccent;
-  width: $size;
-  height: $size;
-  margin-right: 10px;
-}
-
-.left {
-  display: flex;
-  align-items: center;
-  // font-size: 16px;
-  > * {
-    margin-right: 20px;
-  }
-  a {
-    color: $colorFontWhite;
-    display: flex;
-    align-items: center;
-  }
-}
-
+.left,
 .right {
-  display: flex;
-  align-items: center;
+  display: none;
+}
 
-  > * {
-    margin-left: 10px;
+.btnOpenMenu {
+  svg {
   }
 }
 
-.logo {
-  height: 50px;
-  width: 50px;
-
-  &_wrp {
-    padding: 10px 0;
+@media (min-width: $breakPointDs) {
+  .btnOpenMenu {
+    display: none;
   }
-}
-.divider {
-  height: 100%;
-  border-right: 1px solid transparentize($colorWhite, 0.5);
-}
+  .phoneIcon {
+    $size: 20px;
 
-.city {
-  color: $colorAccent;
-}
+    fill: $colorAccent;
+    width: $size;
+    height: $size;
+    margin-right: 10px;
+  }
 
-.icon {
-  $size: 40px;
-  width: $size;
-  height: $size;
-  fill: $colorWhite;
-
-  &_wrp {
-    margin-left: auto;
-    flex-shrink: 0;
+  .left {
     display: flex;
     align-items: center;
+    // font-size: 16px;
+    > * {
+      margin-right: 20px;
+    }
+    a {
+      color: $colorFontWhite;
+      display: flex;
+      align-items: center;
+    }
   }
-}
 
-// .rightBlock {
-//   align-self: center;
-//   text-transform: uppercase;
-//   color: $colorFontWhite;
-// }
+  .right {
+    display: flex;
+    align-items: center;
 
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    > * {
+      margin-left: 10px;
+    }
+  }
 
-.item {
-  margin-right: 10px;
-  text-transform: uppercase;
-}
+  .logo {
+    height: 50px;
+    width: 50px;
 
-.link {
-  padding: 0 10px;
-  display: block;
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: $colorFontWhite;
-  text-transform: capitalize;
+    &_wrp {
+      padding: 10px 0;
+    }
+  }
+  .divider {
+    height: 100%;
+    border-right: 1px solid transparentize($colorWhite, 0.5);
+  }
 
-  &:hover {
+  .city {
+    color: $colorAccent;
+  }
+
+  .icon {
+    $size: 40px;
+    width: $size;
+    height: $size;
+    fill: $colorWhite;
+
+    &_wrp {
+      margin-left: auto;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // .rightBlock {
+  //   align-self: center;
+  //   text-transform: uppercase;
+  //   color: $colorFontWhite;
+  // }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item {
+    margin-right: 10px;
+    text-transform: uppercase;
+  }
+
+  .link {
+    padding: 0 10px;
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
     color: $colorFontWhite;
-    transform: scale(1.05);
+    text-transform: capitalize;
+
+    &:hover {
+      color: $colorFontWhite;
+      transform: scale(1.05);
+    }
   }
-}
 
-.activeLink {
-  color: $colorAccent;
-}
+  .activeLink {
+    color: $colorAccent;
+  }
 
-.cart_title {
-  color: $colorFontWhite;
-  // font-weight: bold;
+  .cart_title {
+    color: $colorFontWhite;
+    // font-weight: bold;
+  }
+
+  // .left,
+  // .right {
+  // display: none;
+  // }
 }

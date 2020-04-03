@@ -17,149 +17,184 @@ const db = [
   // ВИСТ
   {
     id: "001",
-    brend: "Жигулевское",
+    title: "ВИСТ Жигулевское",
     category: "vist",
-    discription: "ПИВО ЖИГУЛЕВСКОЕ СВЕТЛОЕ ФИЛЬТРОВАННОЕ 3.7% об.",
+    discription: "Пиво Жигулевское светлое фильтрованное 3.7% об.",
     price: 25,
-    deg: "3.7",
-    color: "светлое",
-    type: "Фильтрованное",
     img: vist_g
   },
   {
     id: "002",
-    brend: "Московское",
+    title: "ВИСТ Московское",
     category: "vist",
-    discription: "ПИВО МОСКОВСКОЕ СВЕТЛОЕ ФИЛЬТРОВАННОЕ 4,5% об.",
+    discription: "Пиво Московское светлое фильтрованное 4,5% об.",
     price: 26,
-    deg: "4,5",
-    color: "Светлое",
-    type: "Фильтрованное",
     img: vist_mos
   },
   {
     id: "003",
-    brend: "Gold",
+    title: "ВИСТ Gold",
     category: "vist",
-    discription: "ПИВО GOLD СВЕТЛОЕ ФИЛЬТРОВАННОЕ 5,0% об.",
+    discription: "Пиво Gold светлое фильтрованное 5,0% об.",
     price: 26,
-    deg: "5,0%",
-    color: "Светлое",
-    type: "Фильтрованное",
     img: vist_gold
   },
   {
     id: "004",
-    brend: "Запорожская ночь",
+    title: "ВИСТ Запорожская ночь",
     category: "vist",
-    discription: "ПИВО ЗАПОРОЖСКАЯ НОЧЬ Полутёмное ФИЛЬТРОВАННОЕ 4,1% об.",
+    discription: "Пиво Запорожская ночь полутёмное фильтрованное 4,1% об.",
     price: 26,
-    deg: "4,1%",
-    color: "Полутёмное",
-    type: "Фильтрованное",
     img: vist_night
   },
 
   // СИЧ
   {
     id: "005",
-    brend: "Жигулевское",
+    title: "СИЧ Жигулевское",
     category: "sich",
-    discription: "ПИВО Жигулевское СВЕТЛОЕ ФИЛЬТРОВАННОЕ 3.7% об.",
+    discription: "Пиво Жигулевское светлое фильтрованное 3.7% об.",
     price: 22,
-    deg: "4,1",
-    color: "Светлое",
-    type: "Фильтрованное",
     img: sich_g
   },
   {
     id: "006",
-    brend: "Московское",
+    title: "СИЧ Московское фил.",
     category: "sich",
-    discription: "ПИВО Московское СВЕТЛОЕ ФИЛЬТРОВАННОЕ 4.7% об.",
+    discription: "Пиво Московское светлое фильтрованное 4.7% об.",
     price: 23,
-    deg: "4.8",
-    color: "Светлое",
-    type: "Фильтрованное",
     img: sich_mos_filter
   },
   {
     id: "007",
-    brend: "Московское",
+    title: "СИЧ Московское нефил.",
     category: "sich",
-    discription: "ПИВО Московское СВЕТЛОЕ НеФИЛЬТРОВАННОЕ 5.2% об.",
+    discription: "Пиво Московское светлое нефильтрованное 5.2% об.",
     price: 24,
-    deg: "4.8",
-    color: "Светлое",
-    type: " фильтрованное",
     img: sich_mos_notfilter
   },
   {
     id: "008",
-    brend: "Чумацкое",
+    title: "СИЧ Чумацкое",
     category: "sich",
-    discription: "ПИВО Чумацкое Темное ФИЛЬТРОВАННОЕ 4.3% об.",
+    discription: "Пиво Чумацкое темное фильтрованное 4.3% об.",
     price: 24,
-    deg: "4.8",
-    color: "Темное",
-    type: "Фильтрованное",
     img: sich_chumak
   },
   {
     id: "009",
-    brend: "Медовое",
+    title: "СИЧ Медовое",
     category: "sich",
-    discription: "ПИВО Медовое СВЕТЛОЕ ФИЛЬТРОВАННОЕ 4.7% об.",
+    discription: "Пиво Медовое светлое фильтрованное 4.7% об.",
     price: 24,
-    deg: "4.8",
-    color: "Светлое",
-    type: "Фильтрованное",
     img: sich_med
   },
   {
     id: "010",
-    brend: "95",
+    title: "СИЧ 95",
     category: "sich",
-    discription: "ПИВО 95 «LEGO WEIZE» СВЕТЛОЕ ФИЛЬТРОВАННОЕ 5% об.",
+    discription: "Пиво 95 светлое фильтрованное 5% об.",
     price: 24,
-    deg: "4.8",
-    color: "Светлое",
-    type: "Фильтрованное",
     img: sich_95
   },
   {
     id: "011",
-    brend: "Kegler Brielle",
+    title: "СИЧ Kegler Brielle",
     category: "sich",
-    discription: "ПИВО Kegler Brielle СВЕТЛОЕ ФИЛЬТРОВАННОЕ 5% об.",
+    discription: "Пиво Kegler Brielle светлое фильтрованное 5% об.",
     price: 25,
-    deg: "4.8",
-    color: "Светлое",
-    type: "Фильтрованное",
     img: sich_kegler
   },
 
   // Диморис
   {
     id: "012",
-    brend: "Южная Бавария",
+    title: "Диморис Юж. Бавария с.",
     category: "dimoris",
-    discription: "ПИВО Южная Бавария СВЕТЛОЕ ФИЛЬТРОВАННОЕ 4.6% об.",
+    discription: "Пиво Южная Бавария светлое фильтрованное 4.6% об.",
     price: 24,
-    deg: "4.8",
-    color: "Светлое",
-    type: "Фильтрованное",
     img: dimoris_light
   },
   {
     id: "013",
-    brend: "Южная Бавария",
+    title: "Диморис Юж. Бавария т.",
     category: "dimoris",
-    discription: "ПИВО Южная Бавария Темное ФИЛЬТРОВАННОЕ 4.6% об.",
+    discription: "Пиво Южная Бавария темное фильтрованное 4.6% об.",
     price: 24,
-    deg: "4.8",
-    color: "Темное",
-    type: "Фильтрованное",
+    img: dimoris_dark
+  },
+
+  // Сидр
+  {
+    id: "101",
+    title: "Сидр Яблоко",
+    category: "sidre",
+    discription: "Сидр Яблоко 5% об.",
+    price: 24,
+    img: dimoris_dark
+  },
+  {
+    id: "102",
+    title: "Сидр Клубника со сливками",
+    category: "sidre",
+    discription: "Сидр Клубника со сливками 5% об.",
+    price: 24,
+    img: dimoris_dark
+  },
+  {
+    id: "103",
+    title: "Сидр Лайм + имбирь",
+    category: "sidre",
+    discription: "Сидр Лайм + имбирь 5% об.",
+    price: 24,
+    img: dimoris_dark
+  },
+  {
+    id: "104",
+    title: "Сидр Фраголино",
+    category: "sidre",
+    discription: "Сидр Фраголино 5% об.",
+    price: 24,
+    img: dimoris_dark
+  },
+  {
+    id: "105",
+    title: "Сидр Грейпфрут",
+    category: "sidre",
+    discription: "Сидр Грейпфрут 5% об.",
+    price: 24,
+    img: dimoris_dark
+  },
+  {
+    id: "106",
+    title: "Сидр Киви",
+    category: "sidre",
+    discription: "Сидр Киви 5% об.",
+    price: 24,
+    img: dimoris_dark
+  },
+  {
+    id: "107",
+    title: "Сидр Асти Шампань",
+    category: "sidre",
+    discription: "Сидр Асти Шампань 5% об.",
+    price: 24,
+    img: dimoris_dark
+  },
+  {
+    id: "107",
+    title: "Сидр Ананас",
+    category: "sidre",
+    discription: "Сидр Ананас 5% об.",
+    price: 24,
+    img: dimoris_dark
+  },
+  {
+    id: "107",
+    title: "Сидр Пиноколада",
+    category: "sidre",
+    discription: "Сидр Пиноколада 5% об.",
+    price: 24,
     img: dimoris_dark
   }
 ];

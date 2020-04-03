@@ -6,13 +6,16 @@ import { BrowserRouter } from "react-router-dom";
 import "reset-css";
 import App from "./App";
 import "./stylesheets/common.scss";
-import store from "./Redux/store";
+import { store, persistor } from "./Redux/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 const Root = () => (
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <PersistGate persistor={persistor} loading={null}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </PersistGate>
   </Provider>
 );
 

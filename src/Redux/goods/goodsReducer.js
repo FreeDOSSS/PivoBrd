@@ -1,34 +1,6 @@
 import * as types from "./goodsTypes";
 
-const initialState = [
-  {
-    id: "001",
-    currentSize: 0.5,
-    slice: [
-      {
-        type: "3",
-        count: 0
-      },
-      {
-        type: "2",
-        count: 0
-      },
-      {
-        type: "1.5",
-        count: 0
-      },
-      {
-        type: "1",
-        count: 0
-      },
-      {
-        type: "0.5",
-        count: 1
-      }
-    ],
-    _id: "M2y4Tct5O"
-  }
-];
+const initialState = [];
 
 const goodsReducer = (state = [...initialState], action) => {
   const { type, payload } = action;
@@ -39,6 +11,8 @@ const goodsReducer = (state = [...initialState], action) => {
 
     case types.REMOVE_GOODS_ITEM:
       return state.filter(el => el._id !== payload._id);
+    case types.CLEAR_GOODS:
+      return [];
 
     default:
       return state;

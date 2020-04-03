@@ -10,7 +10,7 @@ const { phone_call_hot } = vars;
 function Footer() {
   const getYear = () => new Date().getFullYear();
   return (
-    <>
+    <div className={style.down}>
       <Container wrp={style.wrp} container={style.box}>
         <h2 className={style.name}>pivasov.com</h2>
       </Container>
@@ -30,7 +30,7 @@ function Footer() {
           © {getYear()}
         </p>
       </Container>
-    </>
+    </div>
   );
 }
 

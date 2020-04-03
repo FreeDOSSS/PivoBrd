@@ -3,17 +3,19 @@ import { NavLink } from "react-router-dom";
 import goodsCalcTotal from "../../helpers/goodsCalcTotal";
 import AsideGoods from "../AsideGoods";
 import Container from "../Container";
+import logo from "./../../assets/images/logo.png";
 import vars from "./../../constants/variables";
 import router from "./../../router/router";
+import AsideMenu from "./AsideMenu";
 import * as style from "./Menu.module.scss";
-import { CaretDownOutlined } from "@ant-design/icons";
-
-import logo from "./../../assets/images/logo.png";
 
 const { phone_call_1, phone_call_2 } = vars;
 
 function Menu({ goods }) {
   const [showCanvas, setShowCanvas] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
+
+  const hendlerAsideMenu = () => setShowMenu(!showMenu);
 
   const hendlerButton = () => {
     setShowCanvas(!showCanvas);
@@ -21,6 +23,7 @@ function Menu({ goods }) {
 
   return (
     <>
+      <AsideMenu show={showMenu} onClose={hendlerAsideMenu} />
       <AsideGoods show={showCanvas} onHendler={hendlerButton} />
       <Container wrp={style.wrp} container={style.box}>
         <div className={style.left}>
@@ -30,7 +33,8 @@ function Menu({ goods }) {
           <div className={style.divider}></div>
 
           <div className={style.city}>
-            Бердянск <CaretDownOutlined />
+            Бердянск
+            {/* Бердянск <CaretDownOutlined /> */}
           </div>
 
           <p>Доставка с 9 до 22</p>
@@ -63,7 +67,7 @@ function Menu({ goods }) {
             <li className={style.item}>
               <NavLink
                 exact
-                to="/sidre"
+                to={router.sidre.path}
                 className={style.link}
                 activeClassName={style.activeLink}
               >
@@ -77,11 +81,9 @@ function Menu({ goods }) {
                 className={style.link}
                 activeClassName={style.activeLink}
               >
-                {/* {router.home.title} */}
                 Закуски
               </NavLink>
             </li>
-            <li></li>
           </ul>
           <div className="rightBlock">
             <button
@@ -89,7 +91,6 @@ function Menu({ goods }) {
               className={style.icon_wrp}
               onClick={hendlerButton}
             >
-              {/* <h4 className={style.cart_title}>Корзина</h4> */}
               <svg className={style.icon}>
                 <use href="#cart"></use>
               </svg>
@@ -97,6 +98,11 @@ function Menu({ goods }) {
             </button>
           </div>
         </div>
+        <button type="button" className={style.btnOpenMenu}>
+          <svg>
+            <use href="#menu"></use>
+          </svg>
+        </button>
       </Container>
     </>
   );

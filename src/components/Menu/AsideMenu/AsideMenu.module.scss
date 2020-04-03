@@ -1,0 +1,73 @@
+@import "./../../../constants/variables.scss";
+.phoneIcon {
+  $size: 20px;
+
+  fill: $colorAccent;
+  width: $size;
+  height: $size;
+  margin-right: 10px;
+}
+
+.asidemenu {
+  color: $colorFontWhite;
+  svg {
+    color: rgba(255, 255, 255, 0.459);
+  }
+}
+
+.tel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  color: $colorFontWhite;
+  font-size: 16px;
+}
+
+.delivery {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.city {
+  color: $colorAccent;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  svg {
+    margin-left: 5px;
+    color: $colorAccent;
+  }
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+
+  &_wrp {
+    padding: 10px 0;
+  }
+}
+
+.link {
+  padding: 0 10px;
+  display: block;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: $colorFontWhite;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  &:hover {
+    color: $colorFontWhite;
+    transform: scale(1.05);
+  }
+}
+
+.activeLink {
+  color: $colorAccent;
+}

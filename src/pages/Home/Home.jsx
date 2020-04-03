@@ -1,11 +1,16 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Title from "../../components/Title";
 import RenderListCard from "./../../components/RenderListCard";
 import TopBaner from "./../../components/TopBaner";
+import withGa from "./../../utils/HOC/withGa";
 
 function Home() {
   return (
     <>
+      <Helmet>
+        <title>Доставка живого пива | Бердянск</title>
+      </Helmet>
       <TopBaner title="Доставка живого пива" />
       <Title title="Запорожский пивоварный завод ВИСТ" />
       <RenderListCard name="vist" />
@@ -18,4 +23,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default withGa(Home);

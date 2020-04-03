@@ -24,6 +24,8 @@ export const removeGoods = _id => {
   };
 };
 
+export const clearGoods = () => ({ type: types.CLEAR_GOODS });
+
 // export const saveBudget = budget => {
 //   return {
 //     type: types.SAVE_BUDGET,

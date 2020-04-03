@@ -33,7 +33,6 @@ function Card({ addGoods, item }) {
     });
     showAccept();
   };
-  // TODO: Пофиксить разбежгость высоты карточек
 
   return (
     <>
@@ -49,7 +48,7 @@ function Card({ addGoods, item }) {
       <div className={style.card}>
         <div className={style.top}>
           <div className={style.img_wrp}>
-            <img className={style.img} alt={item.brend} src={item.img} />
+            <img className={style.img} alt={item.title} src={item.img} />
             <div className={style.overlay}></div>
           </div>
 

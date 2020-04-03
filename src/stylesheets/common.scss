@@ -13,6 +13,18 @@ body {
   // background-size: cover;
   // background-attachment: fixed;
 }
+#pivo {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  // flex-direction: column;
+  > * {
+    width: 100%;
+    flex-shrink: 0;
+    // align-self: flex-start;
+  }
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -74,7 +86,7 @@ ul {
   padding: 0;
   margin: 0;
 }
-
+// .ant-btn-primary,
 .super-btn {
   text-decoration: none;
   outline: none;
@@ -98,6 +110,29 @@ ul {
   transition: 0.5s;
 
   &:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+  }
+}
+.ant-btn-primary:active,
+.ant-btn-primary:focus,
+.ant-btn-primary {
+  box-shadow: 0 16px 32px 0 rgba(0, 40, 120, 0.35);
+  background-image: linear-gradient(
+    45deg,
+    #f57820 0%,
+    #deb933 50%,
+    #f77c03 100%
+  );
+  border: none;
+  // display: block;
+  &:hover {
+    background-image: linear-gradient(
+      45deg,
+      #f57820 0%,
+      #deb933 50%,
+      #f77c03 100%
+    );
     box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
     background-position: 0 0;
   }

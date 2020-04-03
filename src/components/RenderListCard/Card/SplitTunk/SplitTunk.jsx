@@ -167,7 +167,7 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
     >
       <div className={style.pivo}>
         <div className={style.img_wrp}>
-          <img src={item.img} alt={item.brend} className={style.img} />
+          <img src={item.img} alt={item.title} className={style.img} />
         </div>
 
         <div className={style.discription}>

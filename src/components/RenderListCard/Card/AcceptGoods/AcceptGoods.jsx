@@ -2,6 +2,8 @@ import { Modal, Typography } from "antd";
 import React, { useEffect, useState } from "react";
 import db from "./../../../../db/db";
 import * as style from "./AcceptGoods.module.scss";
+import { Link } from "react-router-dom";
+import router from "../../../../router";
 
 const { Title } = Typography;
 
@@ -45,7 +47,9 @@ function AcceptGoods({ show, onClose, id }) {
               >
                 Продолжить покупки
               </button>
-              <button className="super-btn">Оформить заказ</button>
+              <Link to={router.goods.path} className="super-btn">
+                Оформить заказ
+              </Link>
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ function GoodsItem({ goods }) {
     item && (
       <Container container={style.box}>
         <div className={style.img_wrp}>
-          <img src={item.img} alt={item.brend} />
+          <img src={item.img} alt={item.title} />
         </div>
         <p className={style.title}>{item.discription}</p>
 

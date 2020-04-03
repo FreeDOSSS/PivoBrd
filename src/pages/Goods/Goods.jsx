@@ -1,12 +1,16 @@
+import { CheckCircleTwoTone } from "@ant-design/icons";
+import { Modal } from "antd";
 import clsx from "clsx";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import shortid from "shortid";
 import AsideCard from "../../components/AsideGoods/AsideCard";
 import Container from "../../components/Container/Container";
-import TopBaner from "./../../components/TopBaner";
+import goodsCalcTotal from "../../helpers/goodsCalcTotal";
+import sendToMes from "../../helpers/sendToMes";
 import * as style from "./Goods.module.scss";
 
-function Goods({ goods }) {
+function Goods({ goods, clear }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [street, setStreet] = useState("");
@@ -14,6 +18,20 @@ function Goods({ goods }) {
   const [flat, setFlat] = useState("");
   const [padik, setPadik] = useState("");
   const [remember, setRemember] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem("field")) {
+      const loc = JSON.parse(localStorage.getItem("field"));
+
+      setName(loc.name);
+      setPhone(loc.phone);
+      setStreet(loc.street);
+      setHouse(loc.house);
+      setFlat(loc.flat);
+      setPadik(loc.padik);
+      setRemember(loc.remember);
+    }
+  }, []);
 
   const fields = [
     {
@@ -71,7 +89,7 @@ function Goods({ goods }) {
         setName(value);
         break;
       case "phone":
-        setPhone(value);
+        setPhone(value.replace(/\D/g, ""));
         break;
       case "street":
         setStreet(value);
@@ -91,14 +109,53 @@ function Goods({ goods }) {
     // return;
   };
 
+  const hendlerForm = event => {
+    if (remember) {
+      const loc = {
+        name,
+        phone,
+        street,
+        house,
+        flat,
+        padik,
+        remember
+      };
+
+      localStorage.setItem("field", JSON.stringify(loc));
+    } else {
+      localStorage.clear();
+    }
+    event.preventDefault();
+    sendToMes(fields, goods);
+    clear();
+    info();
+  };
+
+  function info() {
+    Modal.info({
+      icon: (
+        <CheckCircleTwoTone
+          twoToneColor="#52c41a"
+          style={{ fontSize: "24px" }}
+        />
+      ),
+      title: "Ваш заказ успешно передан.",
+
+      onOk() {}
+    });
+  }
+
   return (
     <>
-      <TopBaner title="Корзина" />
-
+      <Helmet>
+        <title>Корзина</title>
+      </Helmet>
+      {/* <TopBaner title="Корзина" /> */}
+      <div className={style.spacer}></div>
       <Container container={style.box}>
         <div className={style.left}>
           <h2 className={style.title}>Оформление заказа</h2>
-          <form className={style.form}>
+          <form className={style.form} onSubmit={hendlerForm}>
             {fields.map(el => (
               <div key={el.id} data-field={el.name} className={style.label_wrp}>
                 <input
@@ -119,10 +176,24 @@ function Goods({ goods }) {
               type="checkbox"
               name="rememre"
               onChange={hendlerRemeber}
-              value={remember}
+              checked={remember}
               className={style.rememerMe_input}
+              id="remember"
             />
-            <label className={style.rememerMe}>Запонить меня</label>
+            <label
+              htmlFor="remember"
+              onClick={hendlerInput}
+              className={style.rememerMe}
+            >
+              Запомнить меня
+              <span>
+                {remember && (
+                  <svg className={style.svg}>
+                    <use href="#check"></use>
+                  </svg>
+                )}
+              </span>
+            </label>
             <button type="submit" className={clsx("super-btn", style.submit)}>
               Оформить заказ
             </button>
@@ -130,8 +201,20 @@ function Goods({ goods }) {
         </div>
         <div className={style.right}>
           <h2 className={style.title}>Корзина</h2>
-          {goods &&
-            goods.map(el => <AsideCard goods={el} key={shortid.generate()} />)}
+          <div className={style.list}>
+            {goods.length > 0 &&
+              goods.map(el => (
+                <AsideCard goods={el} key={shortid.generate()} />
+              ))}
+            {goods.length > 0 && (
+              <>
+                <p className={style.total}>
+                  Итого: {goodsCalcTotal(goods)} грн.
+                </p>
+                <p className={style.delivery}>+ Доставка по тарифу такси</p>
+              </>
+            )}
+          </div>
         </div>
       </Container>
     </>
