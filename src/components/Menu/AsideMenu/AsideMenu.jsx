@@ -1,6 +1,6 @@
 import { Divider, Drawer } from "antd";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import router from "../../../router";
 import logo from "./../../../assets/images/logo.png";
 import vars from "./../../../constants/variables";
@@ -21,9 +21,9 @@ function AsideMenu({ show, onClose }) {
       className={style.asidemenu}
       placement="left"
     >
-      <div className={style.logo_wrp}>
+      <Link to={router.home.path} className={style.logo_wrp}>
         <img src={logo} alt="Logo" className={style.logo} />
-      </div>
+      </Link>
       <div className={style.city}>
         Бердянск
         {/* Бердянск <CaretDownOutlined /> */}

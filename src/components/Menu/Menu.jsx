@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import goodsCalcTotal from "../../helpers/goodsCalcTotal";
 import AsideGoods from "../AsideGoods";
 import Container from "../Container";
@@ -27,9 +27,9 @@ function Menu({ goods }) {
       <AsideGoods show={showCanvas} onHendler={hendlerButton} />
       <Container wrp={style.wrp} container={style.box}>
         <div className={style.left}>
-          <div className={style.logo_wrp}>
+          <Link to={router.home.path} className={style.logo_wrp}>
             <img src={logo} alt="Logo" className={style.logo} />
-          </div>
+          </Link>
           <div className={style.divider}></div>
 
           <div className={style.city}>
