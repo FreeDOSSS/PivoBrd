@@ -10,7 +10,7 @@ const { phone_call_1, phone_call_2 } = vars;
 
 function AsideMenu({ show, onClose }) {
   const bodyStyle = {
-    backgroundColor: "#1D1D1D"
+    backgroundColor: "#1D1D1D",
   };
   return (
     <Drawer
@@ -45,6 +45,7 @@ function AsideMenu({ show, onClose }) {
       <ul className={style.menu}>
         <li className={style.item}>
           <NavLink
+            onClick={onClose}
             exact
             to={router.home.path}
             className={style.link}
@@ -55,6 +56,7 @@ function AsideMenu({ show, onClose }) {
         </li>
         <li className={style.item}>
           <NavLink
+            onClick={onClose}
             exact
             to={router.sidre.path}
             className={style.link}
@@ -65,6 +67,7 @@ function AsideMenu({ show, onClose }) {
         </li>
         <li className={style.item}>
           <NavLink
+            onClick={onClose}
             to={router.zakuski.path}
             className={style.link}
             activeClassName={style.activeLink}
