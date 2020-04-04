@@ -70,7 +70,7 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
   };
 
   const bodyModal = {
-    padding: "40px",
+    padding: "20px",
   };
   // Счетчик по тарам
   const add = ({ target }) => {
@@ -164,6 +164,7 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
       bodyStyle={bodyModal}
       width={"100%"}
       footer={null}
+      centered
     >
       <div className={style.pivo}>
         <div className={style.img_wrp}>

@@ -6,6 +6,7 @@
 
 .img {
   &_wrp {
+    width: initial;
   }
 }
 
@@ -126,5 +127,30 @@ button {
 
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: $breakPointDs) {
+  .img_wrp {
+    width: 200px;
+  }
+}
+
+@media (max-width: $breakPointTb) {
+  .img_wrp {
+    // display: none;
+    // height: 100px;
+    width: 100%;
+    img {
+      height: 200px;
+    }
+  }
+
+  .pivo {
+    flex-wrap: wrap;
+  }
+
+  .discription {
+    padding: 0;
   }
 }
