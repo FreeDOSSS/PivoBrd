@@ -1,8 +1,9 @@
 @import "./../../constants/variables.scss";
 
 .parallax {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  // padding-top: 50px;
+  padding: 50px 10px;
+  // padding-bottom: 50px;
   // padding-bottom: 10px;
 
   text-align: center;
@@ -11,8 +12,9 @@
     text-align: center;
     font-family: $proxima;
     font-size: 20px;
-    display: inline-block;
+    display: block;
     padding: 10px;
+    margin: auto;
     position: relative;
     font-size: 32px;
     max-width: 560px;

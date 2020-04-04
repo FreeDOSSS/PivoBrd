@@ -8,7 +8,7 @@ function AsideCard({ goods, onDelete }) {
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    setItem(db.find(el => el.id === goods.id));
+    setItem(db.find((el) => el.id === goods.id));
   }, [goods]);
 
   const totalPrice = () => goodsCalcTotal([goods]);
@@ -31,7 +31,12 @@ function AsideCard({ goods, onDelete }) {
 
         <div className={style.discription}>
           <p className={style.title}>{item.discription}</p>
-          <p>Объем: {goods.currentSize} л.</p>
+
+          {Number(item.id) >= 200 ? (
+            <p>Кол-во: {goods.currentSize} шт.</p>
+          ) : (
+            <p>Объем: {goods.currentSize} л.</p>
+          )}
           <p className={style.price}>{totalPrice()} грн.</p>
         </div>
       </div>

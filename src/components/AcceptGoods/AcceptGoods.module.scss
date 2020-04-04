@@ -1,0 +1,92 @@
+@import "./../../constants/variables.scss";
+
+.wrp {
+  display: flex;
+}
+
+.img {
+  max-height: 150px;
+}
+
+.img_wrp {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.discription {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    width: 100%;
+  }
+}
+
+.btnGrooup {
+  align-self: flex-end;
+  display: flex;
+
+  justify-content: space-between;
+
+  a,
+  button {
+    text-align: center;
+    display: block;
+    margin: 10px;
+    flex-grow: 1;
+    font-size: 20px;
+  }
+}
+
+.btnContin {
+  border: 1px solid $colorBlack;
+  color: $colorFontBlack;
+  border-radius: 6px;
+}
+
+.card_title {
+  padding-left: 10px;
+}
+
+@media (max-width: 580px) {
+  .btnGrooup {
+    display: block;
+    > * {
+      width: 100%;
+      padding: 12px 0;
+      line-height: 1;
+    }
+  }
+
+  .wrp {
+    // flex-wrap: wrap;
+    // > * {
+    //   width: 100%;
+    // }
+  }
+
+  .img {
+    width: 100px;
+
+    // margin: auto;
+    &_wrp {
+      // text-align: center;
+    }
+  }
+
+  h3.title {
+    // font-size: 16px;
+    // padding-left: 10px;
+  }
+
+  .discription {
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .img_wrp {
+    display: none;
+  }
+}

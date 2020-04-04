@@ -1,3 +1,5 @@
+import dimoris_dark from "./../assets/images/bovar/dark.png";
+import dimoris_light from "./../assets/images/bovar/light.png";
 import sich_95 from "./../assets/images/sich/sich-95.png";
 import sich_chumak from "./../assets/images/sich/sich-chumak.png";
 import sich_g from "./../assets/images/sich/sich-g.png";
@@ -5,13 +7,11 @@ import sich_kegler from "./../assets/images/sich/sich-kegler.png";
 import sich_mos_filter from "./../assets/images/sich/sich-mos_filter.png";
 import sich_mos_notfilter from "./../assets/images/sich/sich-mos_notfilter.png";
 import sich_med from "./../assets/images/sich/sich_med.png";
+import sidre from "./../assets/images/sidre.png";
 import vist_g from "./../assets/images/vist/vist_g.png";
 import vist_gold from "./../assets/images/vist/vist_gold.png";
 import vist_mos from "./../assets/images/vist/vist_mos.png";
 import vist_night from "./../assets/images/vist/vist_night.png";
-
-import dimoris_light from "./../assets/images/bovar/light.png";
-import dimoris_dark from "./../assets/images/bovar/dark.png";
 
 const db = [
   // ВИСТ
@@ -21,7 +21,7 @@ const db = [
     category: "vist",
     discription: "Пиво Жигулевское светлое фильтрованное 3.7% об.",
     price: 25,
-    img: vist_g
+    img: vist_g,
   },
   {
     id: "002",
@@ -29,7 +29,7 @@ const db = [
     category: "vist",
     discription: "Пиво Московское светлое фильтрованное 4,5% об.",
     price: 26,
-    img: vist_mos
+    img: vist_mos,
   },
   {
     id: "003",
@@ -37,7 +37,7 @@ const db = [
     category: "vist",
     discription: "Пиво Gold светлое фильтрованное 5,0% об.",
     price: 26,
-    img: vist_gold
+    img: vist_gold,
   },
   {
     id: "004",
@@ -45,7 +45,7 @@ const db = [
     category: "vist",
     discription: "Пиво Запорожская ночь полутёмное фильтрованное 4,1% об.",
     price: 26,
-    img: vist_night
+    img: vist_night,
   },
 
   // СИЧ
@@ -55,7 +55,7 @@ const db = [
     category: "sich",
     discription: "Пиво Жигулевское светлое фильтрованное 3.7% об.",
     price: 22,
-    img: sich_g
+    img: sich_g,
   },
   {
     id: "006",
@@ -63,7 +63,7 @@ const db = [
     category: "sich",
     discription: "Пиво Московское светлое фильтрованное 4.7% об.",
     price: 23,
-    img: sich_mos_filter
+    img: sich_mos_filter,
   },
   {
     id: "007",
@@ -71,7 +71,7 @@ const db = [
     category: "sich",
     discription: "Пиво Московское светлое нефильтрованное 5.2% об.",
     price: 24,
-    img: sich_mos_notfilter
+    img: sich_mos_notfilter,
   },
   {
     id: "008",
@@ -79,7 +79,7 @@ const db = [
     category: "sich",
     discription: "Пиво Чумацкое темное фильтрованное 4.3% об.",
     price: 24,
-    img: sich_chumak
+    img: sich_chumak,
   },
   {
     id: "009",
@@ -87,7 +87,7 @@ const db = [
     category: "sich",
     discription: "Пиво Медовое светлое фильтрованное 4.7% об.",
     price: 24,
-    img: sich_med
+    img: sich_med,
   },
   {
     id: "010",
@@ -95,7 +95,7 @@ const db = [
     category: "sich",
     discription: "Пиво 95 светлое фильтрованное 5% об.",
     price: 24,
-    img: sich_95
+    img: sich_95,
   },
   {
     id: "011",
@@ -103,7 +103,7 @@ const db = [
     category: "sich",
     discription: "Пиво Kegler Brielle светлое фильтрованное 5% об.",
     price: 25,
-    img: sich_kegler
+    img: sich_kegler,
   },
 
   // Диморис
@@ -113,7 +113,7 @@ const db = [
     category: "dimoris",
     discription: "Пиво Южная Бавария светлое фильтрованное 4.6% об.",
     price: 24,
-    img: dimoris_light
+    img: dimoris_light,
   },
   {
     id: "013",
@@ -121,7 +121,7 @@ const db = [
     category: "dimoris",
     discription: "Пиво Южная Бавария темное фильтрованное 4.6% об.",
     price: 24,
-    img: dimoris_dark
+    img: dimoris_dark,
   },
 
   // Сидр
@@ -131,7 +131,7 @@ const db = [
     category: "sidre",
     discription: "Сидр Яблоко 5% об.",
     price: 24,
-    img: dimoris_dark
+    img: sidre,
   },
   {
     id: "102",
@@ -139,7 +139,7 @@ const db = [
     category: "sidre",
     discription: "Сидр Клубника со сливками 5% об.",
     price: 24,
-    img: dimoris_dark
+    img: sidre,
   },
   {
     id: "103",
@@ -147,7 +147,7 @@ const db = [
     category: "sidre",
     discription: "Сидр Лайм + имбирь 5% об.",
     price: 24,
-    img: dimoris_dark
+    img: sidre,
   },
   {
     id: "104",
@@ -155,7 +155,7 @@ const db = [
     category: "sidre",
     discription: "Сидр Фраголино 5% об.",
     price: 24,
-    img: dimoris_dark
+    img: sidre,
   },
   {
     id: "105",
@@ -163,7 +163,7 @@ const db = [
     category: "sidre",
     discription: "Сидр Грейпфрут 5% об.",
     price: 24,
-    img: dimoris_dark
+    img: sidre,
   },
   {
     id: "106",
@@ -171,7 +171,7 @@ const db = [
     category: "sidre",
     discription: "Сидр Киви 5% об.",
     price: 24,
-    img: dimoris_dark
+    img: sidre,
   },
   {
     id: "107",
@@ -179,7 +179,7 @@ const db = [
     category: "sidre",
     discription: "Сидр Асти Шампань 5% об.",
     price: 24,
-    img: dimoris_dark
+    img: sidre,
   },
   {
     id: "107",
@@ -187,7 +187,7 @@ const db = [
     category: "sidre",
     discription: "Сидр Ананас 5% об.",
     price: 24,
-    img: dimoris_dark
+    img: sidre,
   },
   {
     id: "107",
@@ -195,8 +195,75 @@ const db = [
     category: "sidre",
     discription: "Сидр Пиноколада 5% об.",
     price: 24,
-    img: dimoris_dark
-  }
+    img: sidre,
+  },
+
+  // Закуски
+
+  {
+    id: "201",
+    title: "Чипсы lays бекон",
+    category: "zakuski",
+    discription: "Чипсы Lays бекон",
+    price: 30,
+    img: sidre,
+  },
+  {
+    id: "201",
+    title: "Чипсы lays бекон",
+    category: "zakuski",
+    discription: "Чипсы Lays бекон",
+    price: 30,
+    img: sidre,
+  },
+  {
+    id: "201",
+    title: "Чипсы lays бекон",
+    category: "zakuski",
+    discription: "Чипсы Lays бекон",
+    price: 30,
+    img: sidre,
+  },
+  {
+    id: "201",
+    title: "Чипсы lays бекон",
+    category: "zakuski",
+    discription: "Чипсы Lays бекон",
+    price: 30,
+    img: sidre,
+  },
+  {
+    id: "201",
+    title: "Чипсы lays бекон",
+    category: "zakuski",
+    discription: "Чипсы Lays бекон",
+    price: 30,
+    img: sidre,
+  },
+  {
+    id: "201",
+    title: "Чипсы lays бекон",
+    category: "zakuski",
+    discription: "Чипсы Lays бекон",
+    price: 30,
+    img: sidre,
+  },
+  {
+    id: "201",
+    title: "Чипсы lays бекон",
+    category: "zakuski",
+    discription: "Чипсы Lays бекон",
+    price: 30,
+    img: sidre,
+  },
+  {
+    id: "201",
+    title: "Чипсы lays бекон",
+    category: "zakuski",
+    discription: "Чипсы Lays бекон",
+    price: 30,
+    img: sidre,
+  },
 ];
 
 export default db;

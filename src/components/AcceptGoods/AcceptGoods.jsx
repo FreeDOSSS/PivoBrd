@@ -1,25 +1,25 @@
 import { Modal, Typography } from "antd";
 import React, { useEffect, useState } from "react";
-import db from "./../../../../db/db";
-import * as style from "./AcceptGoods.module.scss";
 import { Link } from "react-router-dom";
-import router from "../../../../router";
+import db from "../../db/db";
+import router from "../../router";
+import * as style from "./AcceptGoods.module.scss";
 
 const { Title } = Typography;
 
 function AcceptGoods({ show, onClose, id }) {
   const documentStyle = {
     minWidth: "300px",
-    maxWidth: "800px"
+    maxWidth: "800px",
   };
 
   const bodyModal = {
-    padding: "40px"
+    padding: "40px",
   };
 
   const [item, setItem] = useState(null);
   useEffect(() => {
-    setItem(db.find(el => el.id === id));
+    setItem(db.find((el) => el.id === id));
   }, [id]);
 
   return (
@@ -32,13 +32,17 @@ function AcceptGoods({ show, onClose, id }) {
         onCancel={onClose}
         footer={null}
       >
-        <Title level={3}>ВЫ ДОБАВИЛИ В КОРЗИНУ</Title>
+        <Title level={3} className={style.title}>
+          ВЫ ДОБАВИЛИ В КОРЗИНУ
+        </Title>
         <div className={style.wrp}>
           <div className={style.img_wrp}>
             <img src={item.img} className={style.img} alt={item.name} />
           </div>
           <div className={style.discription}>
-            <Title level={4}>{item.discription}</Title>
+            <Title level={4} className={style.card_title}>
+              {item.discription}
+            </Title>
             <div className={style.btnGrooup}>
               <button
                 onClick={onClose}

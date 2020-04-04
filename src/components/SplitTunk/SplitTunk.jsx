@@ -1,9 +1,9 @@
 import { Alert, Divider, Modal } from "antd";
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-import price from "./../../../../db/price";
+import price from "../../db/price";
 import * as style from "./SplitTunk.module.scss";
-import splitBottle from "../../../../helpers/splitBottle";
+import splitBottle from "../../helpers/splitBottle";
 import shortid from "shortid";
 
 // const { Title } = Typography;
@@ -42,35 +42,35 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
     setTotalBottle([
       {
         type: "0.5",
-        count: bottle_05
+        count: bottle_05,
       },
       {
         type: "1",
-        count: bottle_1
+        count: bottle_1,
       },
       {
         type: "1.5",
-        count: bottle_15
+        count: bottle_15,
       },
       {
         type: "2",
-        count: bottle_2
+        count: bottle_2,
       },
       {
         type: "3",
-        count: bottle_3
-      }
+        count: bottle_3,
+      },
     ]);
   }, [bottle_05, bottle_1, bottle_15, bottle_2, bottle_3]);
 
   // Ситили модалки
   const documentStyle = {
     minWidth: "300px",
-    maxWidth: "800px"
+    maxWidth: "800px",
   };
 
   const bodyModal = {
-    padding: "40px"
+    padding: "40px",
   };
   // Счетчик по тарам
   const add = ({ target }) => {
@@ -125,14 +125,14 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
     addGoods({
       id: item.id,
       currentSize: genSize,
-      slice: totalBottle
+      slice: totalBottle,
     });
     onClose();
   };
 
-  // Кнопка Розлить
+  // Кнопка Разлить
   const hendlerSplitBtn = () => {
-    splitBottle(genSize).forEach(el => {
+    splitBottle(genSize).forEach((el) => {
       console.log("el", el);
       switch (el.type) {
         case "3":
@@ -197,13 +197,14 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
           {genSize - reduceBootle() < 0 && (
             <Alert
               className={style.animShowRow}
-              message={`Преувеличен выбор разлива тары на ${reduceBootle() -
-                genSize} л.`}
+              message={`Преувеличен выбор разлива тары на ${
+                reduceBootle() - genSize
+              } л.`}
               type="error"
             />
           )}
 
-          <Divider orientation="left">Розлить по тарам</Divider>
+          <Divider orientation="left">Разлить по тарам</Divider>
 
           <div className={style.selectTunk}>
             <div className={style.selectTunk_item}>
@@ -323,13 +324,13 @@ function SplitTunk({ show, item, onClose, genSize, ink, dec, addGoods }) {
             className={clsx("super-btn", style.autoSplit)}
             onClick={hendlerSplitBtn}
           >
-            Розлить автоматически
+            Разлить автоматически
           </button>
 
           {reduceBootle() > 0 && (
             <>
               <Divider orientation="left">Выбрано</Divider>
-              {totalBottle.map(el =>
+              {totalBottle.map((el) =>
                 el.count > 0 ? (
                   <div
                     className={clsx(style.row, style.animShowRow)}

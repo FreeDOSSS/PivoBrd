@@ -56,7 +56,7 @@
 .control {
   align-self: flex-end;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 button.bottleBtn {
@@ -74,6 +74,7 @@ button.bottleBtn {
   flex-shrink: 0;
   border: 1px solid transparentize($colorBlack, 0.7);
   color: $colorFontBlack;
+  margin-right: 20px;
   // margin: 0 20px;
   border-radius: 6px;
   display: flex;

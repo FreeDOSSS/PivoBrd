@@ -13,7 +13,7 @@ const { phone_call_1, phone_call_2 } = vars;
 
 function Menu({ goods }) {
   const [showCanvas, setShowCanvas] = useState(false);
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   const hendlerAsideMenu = () => setShowMenu(!showMenu);
 
@@ -76,8 +76,7 @@ function Menu({ goods }) {
             </li>
             <li className={style.item}>
               <NavLink
-                // to={router.home.path}
-                to="/zakyski"
+                to={router.zakuski.path}
                 className={style.link}
                 activeClassName={style.activeLink}
               >
@@ -85,24 +84,26 @@ function Menu({ goods }) {
               </NavLink>
             </li>
           </ul>
-          <div className="rightBlock">
-            <button
-              type="button"
-              className={style.icon_wrp}
-              onClick={hendlerButton}
-            >
-              <svg className={style.icon}>
-                <use href="#cart"></use>
-              </svg>
-              <span className={style.circle}>{goodsCalcTotal(goods)} грн.</span>
-            </button>
-          </div>
+          <button
+            type="button"
+            className={style.btnOpenMenu}
+            onClick={hendlerAsideMenu}
+          >
+            <svg>
+              <use href="#menu"></use>
+            </svg>
+          </button>
+          <button
+            type="button"
+            className={style.icon_wrp}
+            onClick={hendlerButton}
+          >
+            <svg className={style.icon}>
+              <use href="#cart"></use>
+            </svg>
+            <span className={style.circle}>{goodsCalcTotal(goods)} грн.</span>
+          </button>
         </div>
-        <button type="button" className={style.btnOpenMenu}>
-          <svg>
-            <use href="#menu"></use>
-          </svg>
-        </button>
       </Container>
     </>
   );

@@ -164,3 +164,39 @@
   font-style: italic;
   font-size: 12px;
 }
+
+@media (max-width: $breakPointDs) {
+  .box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $breakPointTb) {
+  .box {
+    grid-template-columns: 1fr;
+  }
+  .right {
+    order: 1;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .left {
+    order: 2;
+  }
+
+  .list {
+    min-height: 100px;
+  }
+
+  .form {
+    grid-template-areas:
+      "name name name name"
+      "phone phone phone phone"
+      "street street street street"
+      "house house padik padik"
+      "flat flat flat flat"
+      "remmeber remmeber remmeber remmeber"
+      "submit submit submit submit";
+  }
+}

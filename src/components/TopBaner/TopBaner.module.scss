@@ -24,26 +24,20 @@
 }
 
 .img {
-  width: 300px;
+  width: 100px;
   position: absolute;
   z-index: 0;
   transition: all 0.5s ease;
   &.bokal {
     bottom: -50px;
-    left: 150px;
+    left: 10px;
     transform: translate();
   }
 
   &.hmel {
     bottom: 0px;
-    right: 150px;
-    // width: 300px;
-  }
-
-  &.pheno {
-    bottom: 0px;
     right: 0px;
-    width: 400px;
+    // width: 300px;
   }
 }
 
@@ -67,7 +61,7 @@
     text-align: center;
     // font-family: "Rose";
     font-family: $proxima;
-    font-size: 85px;
+    font-size: 30px;
     // font-weight: bold;
     width: 50%;
   }
@@ -75,5 +69,52 @@
   .icon {
     height: 20px;
     margin-bottom: auto;
+  }
+}
+
+@media (min-width: $breakPointTb) {
+  .wrp {
+    min-height: 400px;
+  }
+  .img {
+    width: 200px;
+
+    &.bokal {
+      left: 50px;
+    }
+
+    &.hmel {
+      right: 50px;
+    }
+  }
+
+  .container {
+    .title {
+      font-size: 65px;
+    }
+  }
+}
+
+@media (min-width: $breakPointDs) {
+  .wrp {
+    min-height: calc(100vh - 200px);
+  }
+
+  .img {
+    width: 300px;
+
+    &.bokal {
+      left: 150px;
+    }
+
+    &.hmel {
+      right: 100px;
+    }
+  }
+
+  .container {
+    .title {
+      font-size: 85px;
+    }
   }
 }

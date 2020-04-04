@@ -11,21 +11,10 @@
   align-self: flex-end;
 }
 
-.box {
-  // padding: 100px 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  > * {
-    width: 100%;
-  }
-}
-
 .name {
   text-align: center;
   color: #fff;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 100px 0;
@@ -33,17 +22,20 @@
 
 .copyrate {
   padding: 20px 0;
-  align-self: flex-end;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
   text-transform: uppercase;
+  display: block;
+  align-self: flex-end;
+  justify-content: space-between;
 
   .left {
+    text-align: center;
     color: $colorAccent;
 
     a {
+      padding: 10px 0;
       color: $colorFontWhite;
+      display: block;
     }
   }
 
@@ -55,5 +47,52 @@
 
   &__wrp {
     background-color: $colorBlack;
+  }
+}
+
+.box {
+  // padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  > * {
+    width: 100%;
+  }
+}
+.right {
+  text-align: center;
+
+  span {
+    padding: 10px 0;
+    display: block;
+  }
+}
+@media (min-width: $breakPointTb) {
+  .name {
+    font-size: 50px;
+  }
+  .copyrate {
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+
+    .left {
+      text-align: left;
+      display: inline;
+
+      a {
+        display: inline;
+        padding: 0 10px;
+      }
+    }
+
+    .right {
+      text-align: right;
+
+      span {
+        display: inline;
+      }
+    }
   }
 }

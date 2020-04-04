@@ -9,6 +9,7 @@ import Container from "../../components/Container/Container";
 import goodsCalcTotal from "../../helpers/goodsCalcTotal";
 import sendToMes from "../../helpers/sendToMes";
 import * as style from "./Goods.module.scss";
+import withGa from "../../utils/HOC/withGa";
 
 function Goods({ goods, clear }) {
   const [name, setName] = useState("");
@@ -39,43 +40,43 @@ function Goods({ goods, clear }) {
       name: "name",
       label: "Имя",
       value: name,
-      isRequere: true
+      isRequere: true,
     },
     {
       id: "200",
       name: "phone",
       label: "Телефон",
       value: phone,
-      isRequere: true
+      isRequere: true,
     },
     {
       id: "300",
       name: "street",
       label: "Улица",
       value: street,
-      isRequere: true
+      isRequere: true,
     },
     {
       id: "400",
       name: "house",
       label: "Дом",
       value: house,
-      isRequere: true
+      isRequere: true,
     },
     {
       id: "500",
       name: "flat",
       label: "Квартира / Офис",
       value: flat,
-      isRequere: false
+      isRequere: false,
     },
     {
       id: "600",
       name: "padik",
       label: "Подъезд",
       value: padik,
-      isRequere: false
-    }
+      isRequere: false,
+    },
   ];
 
   const hendlerRemeber = ({ target }) => setRemember(target.checked);
@@ -109,7 +110,7 @@ function Goods({ goods, clear }) {
     // return;
   };
 
-  const hendlerForm = event => {
+  const hendlerForm = (event) => {
     if (remember) {
       const loc = {
         name,
@@ -118,7 +119,7 @@ function Goods({ goods, clear }) {
         house,
         flat,
         padik,
-        remember
+        remember,
       };
 
       localStorage.setItem("field", JSON.stringify(loc));
@@ -141,7 +142,7 @@ function Goods({ goods, clear }) {
       ),
       title: "Ваш заказ успешно передан.",
 
-      onOk() {}
+      onOk() {},
     });
   }
 
@@ -156,7 +157,7 @@ function Goods({ goods, clear }) {
         <div className={style.left}>
           <h2 className={style.title}>Оформление заказа</h2>
           <form className={style.form} onSubmit={hendlerForm}>
-            {fields.map(el => (
+            {fields.map((el) => (
               <div key={el.id} data-field={el.name} className={style.label_wrp}>
                 <input
                   id={el.name}
@@ -203,7 +204,7 @@ function Goods({ goods, clear }) {
           <h2 className={style.title}>Корзина</h2>
           <div className={style.list}>
             {goods.length > 0 &&
-              goods.map(el => (
+              goods.map((el) => (
                 <AsideCard goods={el} key={shortid.generate()} />
               ))}
             {goods.length > 0 && (
@@ -221,4 +222,4 @@ function Goods({ goods, clear }) {
   );
 }
 
-export default Goods;
+export default withGa(Goods);

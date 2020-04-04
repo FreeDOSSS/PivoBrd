@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
-import Container from "./../Container";
+import Container from "../Container";
 import * as style from "./Footer.module.scss";
 
-import vars from "./../../constants/variables";
+import vars from "../../constants/variables";
 
 const { phone_call_hot } = vars;
 
@@ -23,7 +23,7 @@ function Footer() {
           </a>
         </p>
         <p className={style.right}>
-          САЙТ РАЗРАБОТАН
+          <span> САЙТ РАЗРАБОТАН </span>
           <a href="https://webcreate.pro" target="_blank">
             WEBCREATE.PRO
           </a>

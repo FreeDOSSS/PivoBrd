@@ -18,6 +18,10 @@ const App = () => (
         />
         <Route path={router.goods.path} component={router.goods.component} />
         <Route path={router.sidre.path} component={router.sidre.component} />
+        <Route
+          path={router.zakuski.path}
+          component={router.zakuski.component}
+        />
         <Redirect to={router.home.path} />
       </Switch>
     </Suspense>

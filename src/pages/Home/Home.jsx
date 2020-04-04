@@ -12,11 +12,11 @@ function Home() {
         <title>Доставка живого пива | Бердянск</title>
       </Helmet>
       <TopBaner title="Доставка живого пива" />
-      <Title title="Запорожский пивоварный завод ВИСТ" />
+      <Title title="Запорожский пивоваренный завод ВИСТ" />
       <RenderListCard name="vist" />
-      <Title title="Лисичанский пивоварный завод СИЧ" />
+      <Title title="Лисичанский пивоваренный завод СИЧ" />
       <RenderListCard name="sich" />
-      <Title title="Мелитопольский пивоварный завод Димиорис" />
+      <Title title="Мелитопольский пивоваренный завод Димиорис" />
       <RenderListCard name="dimoris" />
       <br />
     </>

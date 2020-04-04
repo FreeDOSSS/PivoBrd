@@ -9,6 +9,7 @@
 .discription {
   //   flex-shrink: 0;
   display: flex;
+  padding-left: 10px;
   flex-wrap: wrap;
   > * {
     width: 100%;
@@ -19,6 +20,7 @@
   height: 100px;
   margin: auto;
   width: 60px;
+  margin-right: 5px;
   &_wrp {
     flex-basis: 60px;
     width: 60px;
