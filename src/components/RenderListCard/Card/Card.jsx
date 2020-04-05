@@ -6,6 +6,8 @@ import AcceptGoods from "../../AcceptGoods";
 import SplitTunk from "../../SplitTunk";
 import * as style from "./Card.module.scss";
 
+import { LazyLoadComponent } from "react-lazy-load-image-component";
+
 function Card({ addGoods, item }) {
   const [tunk, setTunk] = useState(0.5);
 
@@ -45,49 +47,56 @@ function Card({ addGoods, item }) {
         dec={dec}
       />
       <AcceptGoods show={acceptGoods} onClose={closeAccept} id={item.id} />
-      <div className={style.card}>
-        <div className={style.top}>
-          <div className={style.img_wrp}>
-            <img className={style.img} alt={item.title} src={item.img} />
-            <div className={style.overlay}></div>
-          </div>
-
-          <p className={style.discription}>{item.discription}</p>
-        </div>
-        <div className={style.bottom}>
-          <p className={style.price}>{item.price} грн. за 1 л</p>
-          <div className={style.control}>
-            <Tooltip title="Разлить по таре" arrowPointAtCenter>
-              <button
-                type="button"
-                className={clsx(style.bottleBtn, "super-btn")}
-                onClick={showModal}
-              >
-                <svg className={style.icon}>
-                  <use href="#bottle"></use>
-                </svg>
-              </button>
-            </Tooltip>
-
-            <div className={style.select}>
-              <button onClick={dec} className={style.btnControl}>
-                -
-              </button>
-              <span>{tunk}</span>
-              <button onClick={ink} className={style.btnControl}>
-                +
-              </button>
+      <LazyLoadComponent>
+        <div className={style.card}>
+          <div className={style.top}>
+            <div className={style.img_wrp}>
+              <img className={style.img} alt={item.title} src={item.img} />
+              {/* <LazyLoadImage
+              alt={item.alt}
+              src={item.src} // use normal <img> attributes as props
+              className={style.img}
+            /> */}
+              <div className={style.overlay}></div>
             </div>
 
-            <button
-              className={clsx("super-btn", style.buyBtn)}
-              onClick={btnAdd}
-            >
-              Купить
-            </button>
+            <p className={style.discription}>{item.discription}</p>
+          </div>
+          <div className={style.bottom}>
+            <p className={style.price}>{item.price} грн. за 1 л</p>
+            <div className={style.control}>
+              <Tooltip title="Разлить по таре" arrowPointAtCenter>
+                <button
+                  type="button"
+                  className={clsx(style.bottleBtn, "super-btn")}
+                  onClick={showModal}
+                >
+                  <svg className={style.icon}>
+                    <use href="#bottle"></use>
+                  </svg>
+                </button>
+              </Tooltip>
+
+              <div className={style.select}>
+                <button onClick={dec} className={style.btnControl}>
+                  -
+                </button>
+                <span>{tunk}</span>
+                <button onClick={ink} className={style.btnControl}>
+                  +
+                </button>
+              </div>
+
+              <button
+                className={clsx("super-btn", style.buyBtn)}
+                onClick={btnAdd}
+              >
+                Купить
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </LazyLoadComponent>
     </>
   );
 }

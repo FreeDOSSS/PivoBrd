@@ -4,14 +4,17 @@ import bokal from "./../../assets/images/bokal.png";
 import hmel from "./../../assets/images/hmel.png";
 import * as style from "./TopBaner.module.scss";
 
-function TopBaner({ title = "Ytn" }) {
+import bokal_sidre from "./../../assets/images/bokal_sidre.png";
+import frukt from "./../../assets/images/frukt_1.png";
+
+function TopBaner({ title = "", type = "" }) {
   const startX = -50;
   const startY = -50;
 
   const bokalRef = createRef();
   const hmelRef = createRef();
 
-  const onMouseMove = e => {
+  const onMouseMove = (e) => {
     const { clientX, clientY, target } = e;
 
     const w = target.offsetWidth;
@@ -23,21 +26,36 @@ function TopBaner({ title = "Ytn" }) {
 
     bokalRef.current.style.transform = `translate(${x}px, ${y}px)`;
     hmelRef.current.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
-
-    // console.log("bokalRef", bokalRef);
-    // target.style.backgroundPosition = `${x}px ${y}px`;
   };
+
+  let img_left = "";
+  let img_right = "";
+
+  switch (type) {
+    case "pivo":
+      img_left = bokal;
+      img_right = hmel;
+      break;
+    case "sidre":
+      img_left = bokal_sidre;
+      img_right = frukt;
+      break;
+    case "zakuski":
+      break;
+    default:
+      break;
+  }
 
   return (
     <div className={style.wrp} onMouseMove={onMouseMove}>
       <img
-        src={bokal}
+        src={img_left}
         alt="bokal"
         className={clsx(style.img, style.bokal)}
         ref={bokalRef}
       />
       <img
-        src={hmel}
+        src={img_right}
         alt="hmel"
         className={clsx(style.img, style.hmel)}
         ref={hmelRef}
