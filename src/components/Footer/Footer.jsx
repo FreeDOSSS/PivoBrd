@@ -15,13 +15,21 @@ function Footer() {
       <Container wrp={style.wrp} container={style.box}>
         <h2 className={style.name}>pivasov.com</h2>
         <div className={style.soc}>
-          <a href={viber} className={clsx(style.soc_link, style.viber)}>
+          <a
+            href={viber}
+            className={clsx(style.soc_link, style.viber)}
+            target="_blank"
+          >
             <svg className={style.soc_icon}>
               <use href="#viber"></use>
             </svg>
           </a>
 
-          <a href={tg} className={clsx(style.soc_link, style.tg)}>
+          <a
+            href={tg}
+            className={clsx(style.soc_link, style.tg)}
+            target="_blank"
+          >
             <svg className={style.soc_icon}>
               <use href="#tg"></use>
             </svg>
