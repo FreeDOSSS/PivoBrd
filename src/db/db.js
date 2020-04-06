@@ -12,6 +12,11 @@ import vist_g from "./../assets/images/vist/vist_g.png";
 import vist_gold from "./../assets/images/vist/vist_gold.png";
 import vist_mos from "./../assets/images/vist/vist_mos.png";
 import vist_night from "./../assets/images/vist/vist_night.png";
+import bigbob_vasabi from "./../assets/images/big_bob/bigbob_vasabi.jpg";
+import bigbob_chease from "./../assets/images/big_bob/bigbob_chease.jpg";
+import bigbob_chili from "./../assets/images/big_bob/bigbob_chili.jpg";
+import bigbob_korova from "./../assets/images/big_bob/bigbob_korova.jpg";
+import bigbob_salt from "./../assets/images/big_bob/bigbob_salt.jpg";
 
 const db = [
   // ВИСТ
@@ -202,67 +207,43 @@ const db = [
 
   {
     id: "201",
-    title: "Чипсы lays бекон",
+    title: "Орешки Big Bob васаби 70g",
     category: "zakuski",
-    discription: "Чипсы Lays бекон",
-    price: 30,
-    img: sidre,
+    discription: "Орешки Big Bob васаби 70g",
+    price: 1000,
+    img: bigbob_vasabi,
   },
   {
-    id: "201",
-    title: "Чипсы lays бекон",
+    id: "202",
+    title: "Орешки Big Bob соленые 70g",
     category: "zakuski",
-    discription: "Чипсы Lays бекон",
-    price: 30,
-    img: sidre,
+    discription: "Орешки Big Bob соленые 70g",
+    price: 1000,
+    img: bigbob_salt,
   },
   {
-    id: "201",
-    title: "Чипсы lays бекон",
+    id: "203",
+    title: "Орешки Big Bob чили 70g",
     category: "zakuski",
-    discription: "Чипсы Lays бекон",
-    price: 30,
-    img: sidre,
+    discription: "Орешки Big Bob чили 70g",
+    price: 1000,
+    img: bigbob_chili,
   },
   {
-    id: "201",
-    title: "Чипсы lays бекон",
+    id: "204",
+    title: "Орешки Big Bob сыр 70g",
     category: "zakuski",
-    discription: "Чипсы Lays бекон",
-    price: 30,
-    img: sidre,
+    discription: "Орешки Big Bob сыр 70g",
+    price: 1000,
+    img: bigbob_chease,
   },
   {
-    id: "201",
-    title: "Чипсы lays бекон",
+    id: "205",
+    title: "Орешки Big Bob говядина 70g",
     category: "zakuski",
-    discription: "Чипсы Lays бекон",
-    price: 30,
-    img: sidre,
-  },
-  {
-    id: "201",
-    title: "Чипсы lays бекон",
-    category: "zakuski",
-    discription: "Чипсы Lays бекон",
-    price: 30,
-    img: sidre,
-  },
-  {
-    id: "201",
-    title: "Чипсы lays бекон",
-    category: "zakuski",
-    discription: "Чипсы Lays бекон",
-    price: 30,
-    img: sidre,
-  },
-  {
-    id: "201",
-    title: "Чипсы lays бекон",
-    category: "zakuski",
-    discription: "Чипсы Lays бекон",
-    price: 30,
-    img: sidre,
+    discription: "Орешки Big Bob говядина 70g",
+    price: 1000,
+    img: bigbob_korova,
   },
 ];
 

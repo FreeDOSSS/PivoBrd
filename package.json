@@ -30,7 +30,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prenetlify": "npm run build",
-    "netlify": "netlify deploy --prod --dir=build"
+    "netlify": "netlify deploy --prod --dir=build",
+    "predeploy": "npm run build",
+    "deploy": "node config/deploy.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,5 +48,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "ftp-deploy": "^2.3.7"
   }
 }
