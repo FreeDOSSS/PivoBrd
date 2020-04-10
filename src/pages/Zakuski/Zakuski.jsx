@@ -21,7 +21,7 @@ function Zakuski() {
       <Helmet>
         <title>Доставка закусок | Бердянск</title>
       </Helmet>
-      <TopBaner title="Доставка закусок" />
+      <TopBaner title="Доставка закусок в Бердянске" />
       <Title title="Закуски в ассортименте" />
       <Container container={style.box}>
         {list &&

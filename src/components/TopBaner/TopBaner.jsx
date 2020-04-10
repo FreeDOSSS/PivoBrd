@@ -28,23 +28,23 @@ function TopBaner({ title = "", type = "" }) {
     hmelRef.current.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
   };
 
-  let img_left = "";
-  let img_right = "";
+  let img_left = bokal;
+  let img_right = hmel;
 
-  switch (type) {
-    case "pivo":
-      img_left = bokal;
-      img_right = hmel;
-      break;
-    case "sidre":
-      img_left = bokal_sidre;
-      img_right = frukt;
-      break;
-    case "zakuski":
-      break;
-    default:
-      break;
-  }
+  // switch (type) {
+  //   case "pivo":
+  //     img_left = bokal;
+  //     img_right = hmel;
+  //     break;
+  //   case "sidre":
+  //     img_left = bokal_sidre;
+  //     img_right = frukt;
+  //     break;
+  //   case "zakuski":
+  //     break;
+  //   default:
+  //     break;
+  // }
 
   return (
     <div className={style.wrp} onMouseMove={onMouseMove}>

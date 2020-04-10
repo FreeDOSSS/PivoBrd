@@ -11,7 +11,7 @@ function Sidre() {
       <Helmet>
         <title>Доставка сидра | Бердянск</title>
       </Helmet>
-      <TopBaner title="Доставка сидра" type="sidre" />
+      <TopBaner title="Доставка сидра в Бердянске" type="sidre" />
       <Title title="Разливной сидр в ассортименте" />
       <RenderListCard name="sidre" />
       <br />
