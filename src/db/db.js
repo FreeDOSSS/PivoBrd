@@ -230,6 +230,99 @@ const db = [
   },
 
   // Закуски
+
+  // Lays
+  // Maxx
+  {
+    id: "218",
+    title: "Чипсы Lays MAXX Паприка 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays MAXX Паприка 120g",
+    price: 35,
+    img: lays_max_paprika,
+  },
+  {
+    id: "219",
+    title: "Чипсы Lays MAXX Сальса 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays MAXX Сальса 120g",
+    price: 35,
+    img: lays_maxx_salsa,
+  },
+  //  Strong
+  {
+    id: "220",
+    title: "Чипсы Lays Strong Чили лайм 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays Strong Чили лайм 120g",
+    price: 35,
+    img: lays_strong_chili,
+  },
+  {
+    id: "221",
+    title: "Чипсы Lays Strong Огненные ребра 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays Strong Огненные ребра 120g",
+    price: 35,
+    img: lays_strong_fire_rebra,
+  },
+  {
+    id: "222",
+    title: "Чипсы Lays Strong Васаби 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays Strong Васаби 120g",
+    price: 35,
+    img: lays_strong_vasabi,
+  },
+  // Defualt
+  {
+    id: "223",
+    title: "Чипсы Lays Cыр 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Cыр 133g",
+    price: 35,
+    img: lays_chease,
+  },
+  {
+    id: "224",
+    title: "Чипсы Lays Бекон 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Бекон 133g",
+    price: 35,
+    img: lays_bekon,
+  },
+  {
+    id: "225",
+    title: "Чипсы Lays Сметана грибы 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Сметана грибы 133g",
+    price: 35,
+    img: layz_grib_smetana,
+  },
+  {
+    id: "226",
+    title: "Чипсы Lays Сметана лук 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Сметана лук 133g",
+    price: 35,
+    img: lays_smetana_zelen,
+  },
+  {
+    id: "227",
+    title: "Чипсы Lays Краб 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Краб 133g",
+    price: 35,
+    img: lays_krab,
+  },
+  {
+    id: "228",
+    title: "Чипсы Lays Паприка 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Паприка 133g",
+    price: 35,
+    img: lays_paprika,
+  },
   // Орешки
   {
     id: "201",
@@ -370,98 +463,6 @@ const db = [
     discription: "Сухарики Flint сметана с зеленью 70g",
     price: 10,
     img: syx_smetana,
-  },
-  // Lays
-  // Maxx
-  {
-    id: "218",
-    title: "Чипсы Lays MAXX Паприка 120g",
-    category: "zakuski",
-    discription: "Чипсы Lays MAXX Паприка 120g",
-    price: 35,
-    img: lays_max_paprika,
-  },
-  {
-    id: "219",
-    title: "Чипсы Lays MAXX Сальса 120g",
-    category: "zakuski",
-    discription: "Чипсы Lays MAXX Сальса 120g",
-    price: 35,
-    img: lays_maxx_salsa,
-  },
-  //  Strong
-  {
-    id: "220",
-    title: "Чипсы Lays Strong Чили лайм 120g",
-    category: "zakuski",
-    discription: "Чипсы Lays Strong Чили лайм 120g",
-    price: 35,
-    img: lays_strong_chili,
-  },
-  {
-    id: "221",
-    title: "Чипсы Lays Strong Огненные ребра 120g",
-    category: "zakuski",
-    discription: "Чипсы Lays Strong Огненные ребра 120g",
-    price: 35,
-    img: lays_strong_fire_rebra,
-  },
-  {
-    id: "222",
-    title: "Чипсы Lays Strong Васаби 120g",
-    category: "zakuski",
-    discription: "Чипсы Lays Strong Васаби 120g",
-    price: 35,
-    img: lays_strong_vasabi,
-  },
-  // Defualt
-  {
-    id: "223",
-    title: "Чипсы Lays Cыр 133g",
-    category: "zakuski",
-    discription: "Чипсы Lays Cыр 133g",
-    price: 35,
-    img: lays_chease,
-  },
-  {
-    id: "224",
-    title: "Чипсы Lays Бекон 133g",
-    category: "zakuski",
-    discription: "Чипсы Lays Бекон 133g",
-    price: 35,
-    img: lays_bekon,
-  },
-  {
-    id: "225",
-    title: "Чипсы Lays Сметана грибы 133g",
-    category: "zakuski",
-    discription: "Чипсы Lays Сметана грибы 133g",
-    price: 35,
-    img: layz_grib_smetana,
-  },
-  {
-    id: "226",
-    title: "Чипсы Lays Сметана лук 133g",
-    category: "zakuski",
-    discription: "Чипсы Lays Сметана лук 133g",
-    price: 35,
-    img: lays_smetana_zelen,
-  },
-  {
-    id: "227",
-    title: "Чипсы Lays Краб 133g",
-    category: "zakuski",
-    discription: "Чипсы Lays Краб 133g",
-    price: 35,
-    img: lays_krab,
-  },
-  {
-    id: "228",
-    title: "Чипсы Lays Паприка 133g",
-    category: "zakuski",
-    discription: "Чипсы Lays Паприка 133g",
-    price: 35,
-    img: lays_paprika,
   },
 ];
 

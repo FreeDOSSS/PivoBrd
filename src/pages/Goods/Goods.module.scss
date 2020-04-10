@@ -25,7 +25,7 @@
 
 .list:empty {
   height: 100%;
-  background-image: url(./../../assets/images/shopping_cart.svg);
+  background-image: url("./../../assets/images/shopping_cart.svg");
   background-size: 30%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -134,7 +134,6 @@
     content: "";
     width: 20px;
     height: 20px;
-    background-image: url("#check");
     margin-left: 20px;
     border-radius: 6px;
     border: 2px solid #c5c5c5;
