@@ -30,6 +30,20 @@ import vist_gold from "./../assets/images/vist/vist_gold.png";
 import vist_mos from "./../assets/images/vist/vist_mos.png";
 import vist_night from "./../assets/images/vist/vist_night.png";
 
+import lays_max_paprika from "./../assets/images/lays/lays_max_paprika.png";
+import lays_maxx_salsa from "./../assets/images/lays/lays_maxx_salsa.png";
+
+import lays_strong_chili from "./../assets/images/lays/lays_strong_chili.png";
+import lays_strong_fire_rebra from "./../assets/images/lays/lays_strong_fire_rebra.png";
+import lays_strong_vasabi from "./../assets/images/lays/lays_strong_vasabi.png";
+
+import lays_chease from "./../assets/images/lays/lays_chease.png";
+import lays_bekon from "./../assets/images/lays/lays_bekon.png";
+import layz_grib_smetana from "./../assets/images/lays/layz_grib_smetana.png";
+import lays_smetana_zelen from "./../assets/images/lays/lays_smetana_zelen.png";
+import lays_krab from "./../assets/images/lays/lays_krab.png";
+import lays_paprika from "./../assets/images/lays/lays_paprika.png";
+
 const db = [
   // ВИСТ
   {
@@ -219,42 +233,42 @@ const db = [
   // Орешки
   {
     id: "201",
-    title: "Орешки Big Bob васаби 70g",
+    title: "Орешки Big Bob васаби 60g",
     category: "zakuski",
-    discription: "Орешки Big Bob васаби 70g",
-    price: 1000,
+    discription: "Орешки Big Bob васаби 60g",
+    price: 15,
     img: bigbob_vasabi,
   },
   {
     id: "202",
-    title: "Орешки Big Bob соленые 70g",
+    title: "Орешки Big Bob соленые 60g",
     category: "zakuski",
-    discription: "Орешки Big Bob соленые 70g",
-    price: 1000,
+    discription: "Орешки Big Bob соленые 60g",
+    price: 15,
     img: bigbob_salt,
   },
   {
     id: "203",
-    title: "Орешки Big Bob чили 70g",
+    title: "Орешки Big Bob чили 60g",
     category: "zakuski",
-    discription: "Орешки Big Bob чили 70g",
-    price: 1000,
+    discription: "Орешки Big Bob чили 60g",
+    price: 15,
     img: bigbob_chili,
   },
   {
     id: "204",
-    title: "Орешки Big Bob сыр 70g",
+    title: "Орешки Big Bob сыр 60g",
     category: "zakuski",
-    discription: "Орешки Big Bob сыр 70g",
-    price: 1000,
+    discription: "Орешки Big Bob сыр 60g",
+    price: 15,
     img: bigbob_chease,
   },
   {
     id: "205",
-    title: "Орешки Big Bob говядина 70g",
+    title: "Орешки Big Bob говядина 60g",
     category: "zakuski",
-    discription: "Орешки Big Bob говядина 70g",
-    price: 1000,
+    discription: "Орешки Big Bob говядина 60g",
+    price: 15,
     img: bigbob_korova,
   },
   // Сухарики Баг 70gет
@@ -264,7 +278,7 @@ const db = [
     title: "Багет Flint лобстер 70g",
     category: "zakuski",
     discription: "Багет Flint лобстер 70g",
-    price: 1000,
+    price: 10,
     img: baguette_lobster,
   },
   {
@@ -272,7 +286,7 @@ const db = [
     title: "Багет Flint буженина 70g",
     category: "zakuski",
     discription: "Багет Flint буженина 70g",
-    price: 1000,
+    price: 10,
     img: baguette_pork,
   },
   {
@@ -280,7 +294,7 @@ const db = [
     title: "Багет Flint сливочный соус 70g",
     category: "zakuski",
     discription: "Багет Flint сливочный соус 70g",
-    price: 1000,
+    price: 10,
     img: baguette_sous,
   },
   // grenki
@@ -289,7 +303,7 @@ const db = [
     title: "Гренки Flint телятина с аджикой 70g",
     category: "zakuski",
     discription: "Гренки Flint телятина с аджикой 70g",
-    price: 1000,
+    price: 10,
     img: grenki_bif,
   },
   {
@@ -297,7 +311,7 @@ const db = [
     title: "Гренки Flint баварские колбаски 70g",
     category: "zakuski",
     discription: "Гренки Flint баварские колбаски 70g",
-    price: 1000,
+    price: 10,
     img: grenki_bovar,
   },
   {
@@ -305,7 +319,7 @@ const db = [
     title: "Гренки Flint сало с хреном 70g",
     category: "zakuski",
     discription: "Гренки Flint сало с хреном 70g",
-    price: 1000,
+    price: 10,
     img: grenki_salo,
   },
   // Сухарики
@@ -314,7 +328,7 @@ const db = [
     title: "Сухарики Flint бекон 70g",
     category: "zakuski",
     discription: "Сухарики Flint бекон 70g",
-    price: 1000,
+    price: 10,
     img: syx_bekon,
   },
   {
@@ -322,7 +336,7 @@ const db = [
     title: "Сухарики Flint краб 70g",
     category: "zakuski",
     discription: "Сухарики Flint краб 70g",
-    price: 1000,
+    price: 10,
     img: syx_crab,
   },
   {
@@ -330,7 +344,7 @@ const db = [
     title: "Сухарики Flint холодец с хреном 70g",
     category: "zakuski",
     discription: "Сухарики Flint холодец с хреном 70g",
-    price: 1000,
+    price: 10,
     img: syx_hren,
   },
   {
@@ -338,7 +352,7 @@ const db = [
     title: "Сухарики Flint mix 100g",
     category: "zakuski",
     discription: "Сухарики Flint mix 100g",
-    price: 1000,
+    price: 15,
     img: syx_mix,
   },
   {
@@ -346,7 +360,7 @@ const db = [
     title: "Сухарики Flint шашлык 70g",
     category: "zakuski",
     discription: "Сухарики Flint шашлык 70g",
-    price: 1000,
+    price: 10,
     img: syx_shashlik,
   },
   {
@@ -354,8 +368,100 @@ const db = [
     title: "Сухарики Flint сметана с зеленью 70g",
     category: "zakuski",
     discription: "Сухарики Flint сметана с зеленью 70g",
-    price: 1000,
+    price: 10,
     img: syx_smetana,
+  },
+  // Lays
+  // Maxx
+  {
+    id: "218",
+    title: "Чипсы Lays MAXX Паприка 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays MAXX Паприка 120g",
+    price: 35,
+    img: lays_max_paprika,
+  },
+  {
+    id: "219",
+    title: "Чипсы Lays MAXX Сальса 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays MAXX Сальса 120g",
+    price: 35,
+    img: lays_maxx_salsa,
+  },
+  //  Strong
+  {
+    id: "220",
+    title: "Чипсы Lays Strong Чили лайм 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays Strong Чили лайм 120g",
+    price: 35,
+    img: lays_strong_chili,
+  },
+  {
+    id: "221",
+    title: "Чипсы Lays Strong Огненные ребра 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays Strong Огненные ребра 120g",
+    price: 35,
+    img: lays_strong_fire_rebra,
+  },
+  {
+    id: "222",
+    title: "Чипсы Lays Strong Васаби 120g",
+    category: "zakuski",
+    discription: "Чипсы Lays Strong Васаби 120g",
+    price: 35,
+    img: lays_strong_vasabi,
+  },
+  // Defualt
+  {
+    id: "223",
+    title: "Чипсы Lays Cыр 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Cыр 133g",
+    price: 35,
+    img: lays_chease,
+  },
+  {
+    id: "224",
+    title: "Чипсы Lays Бекон 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Бекон 133g",
+    price: 35,
+    img: lays_bekon,
+  },
+  {
+    id: "225",
+    title: "Чипсы Lays Сметана грибы 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Сметана грибы 133g",
+    price: 35,
+    img: layz_grib_smetana,
+  },
+  {
+    id: "226",
+    title: "Чипсы Lays Сметана лук 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Сметана лук 133g",
+    price: 35,
+    img: lays_smetana_zelen,
+  },
+  {
+    id: "227",
+    title: "Чипсы Lays Краб 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Краб 133g",
+    price: 35,
+    img: lays_krab,
+  },
+  {
+    id: "228",
+    title: "Чипсы Lays Паприка 133g",
+    category: "zakuski",
+    discription: "Чипсы Lays Паприка 133g",
+    price: 35,
+    img: lays_paprika,
   },
 ];
 

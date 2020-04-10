@@ -4,9 +4,6 @@ import bokal from "./../../assets/images/bokal.png";
 import hmel from "./../../assets/images/hmel.png";
 import * as style from "./TopBaner.module.scss";
 
-import bokal_sidre from "./../../assets/images/bokal_sidre.png";
-import frukt from "./../../assets/images/frukt_1.png";
-
 function TopBaner({ title = "", type = "" }) {
   const startX = -50;
   const startY = -50;
