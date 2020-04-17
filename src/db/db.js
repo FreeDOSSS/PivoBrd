@@ -101,7 +101,7 @@ const db = [
     title: "СИЧ Московское нефил.",
     category: "sich",
     discription: "Пиво Московское светлое нефильтрованное 5.2% об.",
-    price: 24,
+    price: 26,
     img: sich_mos_notfilter,
   },
   {
@@ -143,7 +143,7 @@ const db = [
     title: "Диморис Юж. Бавария с.",
     category: "dimoris",
     discription: "Пиво Южная Бавария светлое фильтрованное 4.6% об.",
-    price: 24,
+    price: 25,
     img: dimoris_light,
   },
   {
@@ -151,7 +151,7 @@ const db = [
     title: "Диморис Юж. Бавария т.",
     category: "dimoris",
     discription: "Пиво Южная Бавария темное фильтрованное 4.6% об.",
-    price: 24,
+    price: 26,
     img: dimoris_dark,
   },
 
